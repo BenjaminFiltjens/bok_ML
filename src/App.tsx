@@ -1,9 +1,11 @@
 import { ArrowUpDown, BookOpen, BrainCircuit, CalendarDays, Database, ExternalLink, FileText, Filter, RefreshCw, Search, Tag, X } from "lucide-react";
-import { useEffect, useMemo, useState, type KeyboardEvent } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import taxonomy from "../data/taxonomy.json";
-import vennScene from "./data/venn-layout.json";
+import { TaxonomyVenn } from "./components/TaxonomyVenn";
+import { BOK_BY_ID, BOK_BY_SLUG, BOK_ELEMENTS, getBokElementBySlug } from "./data/bok-content";
 import { applyFilters, uniqueValues } from "./lib/search";
-import type { ExplorerFilters, ThesisDataset, ThesisRecord } from "./types";
+import { parseRouteHash, routeToHash, type AppRoute } from "./lib/routes";
+import type { BokElementContent, ExplorerFilters, ThesisDataset, ThesisRecord } from "./types";
 
 const EMPTY_FILTERS: ExplorerFilters = {
   query: "",
@@ -17,102 +19,6 @@ const EMPTY_FILTERS: ExplorerFilters = {
   includeArticles: false,
   sort: "relevance"
 };
-
-type VennElement = {
-  id: string;
-  type: "ellipse" | "rectangle" | "text" | "image";
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-  angle?: number;
-  strokeColor?: string;
-  backgroundColor?: string;
-  strokeWidth?: number;
-  strokeStyle?: string;
-  opacity?: number;
-  roundness?: { type: number } | null;
-  text?: string;
-  fontSize?: number;
-  fontFamily?: number;
-  textAlign?: string;
-  lineHeight?: number;
-  fileId?: string;
-  crop?: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-    naturalWidth: number;
-    naturalHeight: number;
-  } | null;
-};
-
-type VennScene = {
-  elements: VennElement[];
-  files?: Record<string, { fileName: string; mimeType: string }>;
-};
-
-type Hotspot = {
-  id: string;
-  label: string;
-  elementId: string;
-  kind: "method" | "domain";
-  countX: number;
-  countY: number;
-  target?: {
-    type: "ellipse" | "rectangle";
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-    rx?: number;
-  };
-};
-
-const EXCALIDRAW_SCENE = vennScene as VennScene;
-const VENN_ELEMENTS = EXCALIDRAW_SCENE.elements.filter((element) => !("isDeleted" in element) || !(element as VennElement & { isDeleted?: boolean }).isDeleted);
-const VENN_ELEMENT_BY_ID = new Map(VENN_ELEMENTS.map((element) => [element.id, element]));
-const VENN_BOUNDS = VENN_ELEMENTS.reduce(
-  (bounds, element) => ({
-    minX: Math.min(bounds.minX, element.x),
-    minY: Math.min(bounds.minY, element.y),
-    maxX: Math.max(bounds.maxX, element.x + element.width),
-    maxY: Math.max(bounds.maxY, element.y + element.height)
-  }),
-  { minX: Number.POSITIVE_INFINITY, minY: Number.POSITIVE_INFINITY, maxX: Number.NEGATIVE_INFINITY, maxY: Number.NEGATIVE_INFINITY }
-);
-const VENN_PADDING = 28;
-
-const TAXONOMY_HOTSPOTS: Hotspot[] = [
-  {
-    id: "Machine Learning",
-    label: "Machine Learning",
-    elementId: "Bps2xFq2",
-    kind: "method",
-    countX: 1248,
-    countY: 262,
-    target: { type: "rectangle", x: 760, y: 72, width: 540, height: 210, rx: 28 }
-  },
-  {
-    id: "Deep Learning",
-    label: "Deep Learning",
-    elementId: "B0qF6tFv",
-    kind: "method",
-    countX: 1215,
-    countY: 392,
-    target: { type: "ellipse", x: 790, y: 282, width: 470, height: 155 }
-  },
-  { id: "Supervised learning", label: "Supervised learning", elementId: "JwKZ0Y4c", kind: "method", countX: 660, countY: 676 },
-  { id: "Unsupervised learning", label: "Unsupervised learning", elementId: "nK5nq2Gx", kind: "method", countX: 1465, countY: 665 },
-  { id: "Reinforcement learning", label: "Reinforcement learning", elementId: "lC-CPT4IQRzaFJfEXhK2w", kind: "method", countX: 1190, countY: 914 },
-  { id: "Foundation Models", label: "Foundation models", elementId: "c0KcL4bF", kind: "method", countX: 1208, countY: 514 },
-  { id: "Generative AI", label: "Generative AI", elementId: "tHk80p6p", kind: "method", countX: 1154, countY: 644 },
-  { id: "TLO", label: "Transport & Logistics", elementId: "ZYfmmRO5", kind: "domain", countX: 640, countY: 282 },
-  { id: "ICT", label: "ICT", elementId: "tF3bGfV9", kind: "domain", countX: 1812, countY: 272 },
-  { id: "E&I", label: "Energy & Industry", elementId: "m4TfE2X5", kind: "domain", countX: 670, countY: 954 },
-  { id: "SDM", label: "System Decision Methods", elementId: "2H9TQJtB", kind: "domain", countX: 1885, countY: 954 }
-];
 
 function formatDate(value: string): string {
   if (!value) return "Unknown refresh";
@@ -134,10 +40,19 @@ function formatList(values: string[]): string {
 }
 
 function App() {
+  const [route, setRoute] = useState<AppRoute>(() => parseRouteHash(window.location.hash));
   const [dataset, setDataset] = useState<ThesisDataset | null>(null);
   const [loadError, setLoadError] = useState("");
-  const [filters, setFilters] = useState<ExplorerFilters>(EMPTY_FILTERS);
-  const [selectedId, setSelectedId] = useState("");
+
+  useEffect(() => {
+    function syncRoute() {
+      setRoute(parseRouteHash(window.location.hash));
+    }
+
+    window.addEventListener("hashchange", syncRoute);
+    syncRoute();
+    return () => window.removeEventListener("hashchange", syncRoute);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -147,10 +62,7 @@ function App() {
         return response.json();
       })
       .then((data: ThesisDataset) => {
-        if (!cancelled) {
-          setDataset(data);
-          setSelectedId(data.records[0]?.id || "");
-        }
+        if (!cancelled) setDataset(data);
       })
       .catch((error: Error) => {
         if (!cancelled) setLoadError(error.message);
@@ -159,6 +71,90 @@ function App() {
       cancelled = true;
     };
   }, []);
+
+  return (
+    <main className="app-shell">
+      <SiteHeader activePage={route.page} dataset={dataset} loadError={loadError} />
+      {route.page === "overview" ? <OverviewPage slug={route.slug} /> : <ThesisExplorerPage dataset={dataset} loadError={loadError} />}
+      <SiteFooter activePage={route.page} />
+    </main>
+  );
+}
+
+function SiteHeader({ activePage, dataset, loadError }: { activePage: AppRoute["page"]; dataset: ThesisDataset | null; loadError: string }) {
+  return (
+    <header className="top-band">
+      <div className="top-content">
+        <div className="brand-lockup">
+          <span className="logo-icon" aria-hidden="true">
+            ML
+          </span>
+          <div>
+            <p className="eyebrow">TU Delft TBM</p>
+            <h1>{activePage === "overview" ? "Machine Learning BoK Overview" : "Machine Learning Thesis Explorer"}</h1>
+          </div>
+        </div>
+        <nav className="top-nav" aria-label="Site sections">
+          <a className={activePage === "overview" ? "top-nav-link active" : "top-nav-link"} href="#overview" aria-current={activePage === "overview" ? "page" : undefined}>
+            <BrainCircuit aria-hidden="true" />
+            <span>Overview</span>
+          </a>
+          <a className={activePage === "theses" ? "top-nav-link active" : "top-nav-link"} href="#theses" aria-current={activePage === "theses" ? "page" : undefined}>
+            <BookOpen aria-hidden="true" />
+            <span>Theses</span>
+          </a>
+        </nav>
+        <HeaderStatus activePage={activePage} dataset={dataset} loadError={loadError} />
+      </div>
+    </header>
+  );
+}
+
+function HeaderStatus({ activePage, dataset, loadError }: { activePage: AppRoute["page"]; dataset: ThesisDataset | null; loadError: string }) {
+  if (activePage === "overview") {
+    return (
+      <div className="source-pill">
+        <BrainCircuit aria-hidden="true" />
+        <span>BoK overview</span>
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="source-pill">
+        <Database aria-hidden="true" />
+        <span>Data unavailable</span>
+      </div>
+    );
+  }
+
+  if (!dataset) {
+    return (
+      <div className="source-pill">
+        <RefreshCw aria-hidden="true" className="spin" />
+        <span>Loading data</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="source-pill" title={dataset.source.note}>
+      <Database aria-hidden="true" />
+      <span>{formatDate(dataset.generatedAt)}</span>
+    </div>
+  );
+}
+
+function ThesisExplorerPage({ dataset, loadError }: { dataset: ThesisDataset | null; loadError: string }) {
+  const [filters, setFilters] = useState<ExplorerFilters>(EMPTY_FILTERS);
+  const [selectedId, setSelectedId] = useState("");
+
+  useEffect(() => {
+    if (dataset?.records[0] && !selectedId) {
+      setSelectedId(dataset.records[0].id);
+    }
+  }, [dataset, selectedId]);
 
   const records = dataset?.records || [];
   const recordsInScope = useMemo(() => records.filter((record) => filters.includeArticles || record.recordCategory !== "article"), [records, filters.includeArticles]);
@@ -182,47 +178,25 @@ function App() {
 
   if (loadError) {
     return (
-      <main className="app-shell">
-        <section className="empty-state">
-          <Database aria-hidden="true" />
-          <h1>Thesis data could not be loaded</h1>
-          <p>{loadError}</p>
-        </section>
-      </main>
+      <section className="empty-state">
+        <Database aria-hidden="true" />
+        <h2>Thesis data could not be loaded</h2>
+        <p>{loadError}</p>
+      </section>
     );
   }
 
   if (!dataset) {
     return (
-      <main className="app-shell">
-        <section className="empty-state">
-          <RefreshCw aria-hidden="true" className="spin" />
-          <h1>Loading thesis explorer</h1>
-        </section>
-      </main>
+      <section className="empty-state">
+        <RefreshCw aria-hidden="true" className="spin" />
+        <h2>Loading thesis explorer</h2>
+      </section>
     );
   }
 
   return (
-    <main className="app-shell">
-      <header className="top-band">
-        <div className="top-content">
-          <div className="brand-lockup">
-            <span className="logo-icon" aria-hidden="true">
-              ML
-            </span>
-            <div>
-              <p className="eyebrow">TU Delft TBM</p>
-              <h1>Machine Learning Thesis Explorer</h1>
-            </div>
-          </div>
-          <div className="source-pill" title={dataset.source.note}>
-            <Database aria-hidden="true" />
-            <span>{formatDate(dataset.generatedAt)}</span>
-          </div>
-        </div>
-      </header>
-
+    <>
       <section className="stats-band" aria-label="Dataset summary">
         <Metric icon={<BookOpen aria-hidden="true" />} label={filters.includeArticles ? "ML records" : "ML theses"} value={formatCount(recordsInScope.length)} />
         <Metric icon={<Database aria-hidden="true" />} label="Records checked" value={formatCount(dataset.stats.totalHarvested)} />
@@ -313,24 +287,66 @@ function App() {
           {selectedRecord ? <ThesisDetail record={selectedRecord} /> : null}
         </aside>
       </section>
-
-      <footer className="site-footer-lite">
-        <div className="footer-inner">
-          <div>
-            <h2>TBM Machine Learning Thesis Explorer</h2>
-            <p>Generated from public TU Delft Repository metadata. Thesis files are linked, not mirrored.</p>
-          </div>
-          <a href="https://repository.tudelft.nl/" target="_blank" rel="noreferrer">
-            <ExternalLink aria-hidden="true" />
-            TU Delft Repository
-          </a>
-        </div>
-      </footer>
-    </main>
+    </>
   );
 }
 
-function Metric({ icon, label, value }: { icon: JSX.Element; label: string; value: string }) {
+function OverviewPage({ slug }: { slug: string }) {
+  const selected = getBokElementBySlug(slug);
+  const relatedElements = selected.relatedIds.map((id) => BOK_BY_ID.get(id)).filter((element): element is BokElementContent => Boolean(element));
+  const methodCount = BOK_ELEMENTS.filter((element) => element.kind === "method").length;
+  const domainCount = BOK_ELEMENTS.filter((element) => element.kind === "domain").length;
+
+  useEffect(() => {
+    if (!BOK_BY_SLUG.has(slug)) {
+      window.location.hash = routeToHash({ page: "overview", slug: selected.slug });
+    }
+  }, [selected.slug, slug]);
+
+  return (
+    <>
+      <section className="overview-intro">
+        <div>
+          <p className="eyebrow">Interactive BoK</p>
+          <h2>Machine learning concepts in context</h2>
+          <p>The overview connects core method families with TBM application areas, keeping the original BoK map visible while each element gets teaching-primer notes.</p>
+        </div>
+        <div className="overview-summary" aria-label="Overview summary">
+          <span>{formatCount(methodCount)} method regions</span>
+          <span>{formatCount(domainCount)} application areas</span>
+        </div>
+      </section>
+
+      <section className="overview-shell">
+        <div className="overview-map-column">
+          <div className="taxonomy-header">
+            <BrainCircuit aria-hidden="true" />
+            <div>
+              <h2>Machine Learning BoK Map</h2>
+              <p>Method families sit in the centre; TBM application areas frame the map.</p>
+            </div>
+          </div>
+          <div className="venn-stage overview-venn-stage">
+            <TaxonomyVenn
+              activeIds={[selected.id]}
+              ariaLabel="Interactive BoK map for machine-learning methods and TBM application areas"
+              onSelect={(hotspot) => {
+                const content = BOK_BY_ID.get(hotspot.id);
+                if (content) window.location.hash = routeToHash({ page: "overview", slug: content.slug });
+              }}
+            />
+          </div>
+        </div>
+
+        <aside className="bok-panel" aria-label="Selected BoK element">
+          <BokExplanation element={selected} relatedElements={relatedElements} />
+        </aside>
+      </section>
+    </>
+  );
+}
+
+function Metric({ icon, label, value }: { icon: ReactNode; label: string; value: string }) {
   return (
     <div className="metric">
       {icon}
@@ -342,7 +358,7 @@ function Metric({ icon, label, value }: { icon: JSX.Element; label: string; valu
   );
 }
 
-function SelectFilter({ icon, label, value, options, onChange }: { icon: JSX.Element; label: string; value: string; options: string[]; onChange: (value: string) => void }) {
+function SelectFilter({ icon, label, value, options, onChange }: { icon: ReactNode; label: string; value: string; options: string[]; onChange: (value: string) => void }) {
   return (
     <label className="field-control">
       {icon}
@@ -414,6 +430,7 @@ function TaxonomyMap({
   const domainCounts = Object.fromEntries(
     taxonomy.domainNodes.map((node) => [node.id, records.filter((record) => record.dominantApplicationDomain === node.id).length])
   );
+  const counts = { ...methodCounts, ...domainCounts };
 
   return (
     <section className="taxonomy-section" aria-label="Interactive method and application taxonomy">
@@ -425,179 +442,19 @@ function TaxonomyMap({
         </div>
       </div>
       <div className="venn-stage">
-        <svg
-          className="venn-scene"
-          viewBox={`${VENN_BOUNDS.minX - VENN_PADDING} ${VENN_BOUNDS.minY - VENN_PADDING} ${VENN_BOUNDS.maxX - VENN_BOUNDS.minX + VENN_PADDING * 2} ${
-            VENN_BOUNDS.maxY - VENN_BOUNDS.minY + VENN_PADDING * 2
-          }`}
-          role="img"
-          aria-label="Interactive Venn taxonomy for machine-learning methods and application domains"
-        >
-          <title>Interactive Venn taxonomy</title>
-          <g className="venn-base" aria-hidden="true">
-            {VENN_ELEMENTS.map((element) => (
-              <VennElementShape key={element.id} element={element} />
-            ))}
-          </g>
-          <g className="venn-hotspots">
-            {TAXONOMY_HOTSPOTS.map((hotspot) => {
-              const count = hotspot.kind === "method" ? methodCounts[hotspot.id] || 0 : domainCounts[hotspot.id] || 0;
-              const active = hotspot.kind === "method" ? activeMethod === hotspot.id : activeDomain === hotspot.id;
-              const onSelect = hotspot.kind === "method" ? onMethodSelect : onDomainSelect;
-              return <VennHotspot key={hotspot.id} hotspot={hotspot} count={count} active={active} onSelect={onSelect} />;
-            })}
-          </g>
-        </svg>
+        <TaxonomyVenn
+          activeIds={[activeMethod, activeDomain].filter(Boolean)}
+          ariaLabel="Interactive Venn taxonomy for machine-learning methods and application domains"
+          counts={counts}
+          onSelect={(hotspot) => {
+            if (hotspot.kind === "method") onMethodSelect(hotspot.id);
+            else onDomainSelect(hotspot.id);
+          }}
+          showCounts
+        />
       </div>
     </section>
   );
-}
-
-function VennElementShape({ element }: { element: VennElement }) {
-  const opacity = (element.opacity ?? 100) / 100;
-  const stroke = element.strokeColor || "transparent";
-  const fill = element.backgroundColor === "transparent" ? "transparent" : element.backgroundColor || "transparent";
-  const strokeDasharray = element.strokeStyle === "dashed" ? "12 10" : undefined;
-
-  if (element.type === "ellipse") {
-    return (
-      <ellipse
-        cx={element.x + element.width / 2}
-        cy={element.y + element.height / 2}
-        rx={element.width / 2}
-        ry={element.height / 2}
-        fill={fill}
-        stroke={stroke}
-        strokeWidth={element.strokeWidth || 1}
-        strokeDasharray={strokeDasharray}
-        opacity={opacity}
-      />
-    );
-  }
-
-  if (element.type === "rectangle") {
-    return (
-      <rect
-        x={element.x}
-        y={element.y}
-        width={element.width}
-        height={element.height}
-        rx={element.roundness ? 22 : 0}
-        fill={fill}
-        stroke={stroke}
-        strokeWidth={element.strokeWidth || 1}
-        opacity={opacity}
-      />
-    );
-  }
-
-  if (element.type === "image" && element.fileId) {
-    const file = EXCALIDRAW_SCENE.files?.[element.fileId];
-    if (!file?.fileName) return null;
-    const href = `${import.meta.env.BASE_URL}assets/${file.fileName}`;
-    const clipId = `clip-${element.id}`;
-    if (!element.crop) {
-      return <image href={href} x={element.x} y={element.y} width={element.width} height={element.height} opacity={opacity} preserveAspectRatio="xMidYMid meet" />;
-    }
-    const scaleX = element.width / element.crop.width;
-    const scaleY = element.height / element.crop.height;
-    return (
-      <g opacity={opacity}>
-        <clipPath id={clipId}>
-          <rect x={element.x} y={element.y} width={element.width} height={element.height} />
-        </clipPath>
-        <image
-          href={href}
-          x={element.x - element.crop.x * scaleX}
-          y={element.y - element.crop.y * scaleY}
-          width={element.crop.naturalWidth * scaleX}
-          height={element.crop.naturalHeight * scaleY}
-          clipPath={`url(#${clipId})`}
-          preserveAspectRatio="none"
-        />
-      </g>
-    );
-  }
-
-  if (element.type === "text" && element.text) {
-    const lines = element.text.split("\n");
-    const fontSize = element.fontSize || 18;
-    const lineHeight = fontSize * (element.lineHeight || 1.25);
-    const textAnchor = element.textAlign === "center" ? "middle" : element.textAlign === "right" ? "end" : "start";
-    const x = element.textAlign === "center" ? element.x + element.width / 2 : element.textAlign === "right" ? element.x + element.width : element.x;
-    const weight = fontSize >= 30 ? 700 : 400;
-    return (
-      <text
-        x={x}
-        y={element.y}
-        textAnchor={textAnchor}
-        dominantBaseline="hanging"
-        fill={element.strokeColor || "currentColor"}
-        opacity={opacity}
-        fontFamily={element.fontFamily === 1 ? "Roboto Slab, Georgia, serif" : "Arial, Helvetica, sans-serif"}
-        fontSize={fontSize}
-        fontWeight={weight}
-      >
-        {lines.map((line, index) => (
-          <tspan key={`${element.id}-${index}`} x={x} dy={index === 0 ? 0 : lineHeight}>
-            {line}
-          </tspan>
-        ))}
-      </text>
-    );
-  }
-
-  return null;
-}
-
-function VennHotspot({ hotspot, count, active, onSelect }: { hotspot: Hotspot; count: number; active: boolean; onSelect: (label: string) => void }) {
-  const element = VENN_ELEMENT_BY_ID.get(hotspot.elementId);
-  if (!element) return null;
-  const countText = formatCount(count);
-  const countWidth = Math.max(42, countText.length * 14 + 24);
-
-  function handleKeyDown(event: KeyboardEvent<SVGGElement>) {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      onSelect(hotspot.id);
-    }
-  }
-
-  return (
-    <g
-      className={`venn-click-target ${active ? "active" : ""}`}
-      role="button"
-      tabIndex={0}
-      aria-label={`${hotspot.label}: ${countText} theses`}
-      aria-pressed={active}
-      onClick={() => onSelect(hotspot.id)}
-      onKeyDown={handleKeyDown}
-    >
-      <VennTargetShape element={element} target={hotspot.target} />
-      <g className="venn-count" transform={`translate(${hotspot.countX} ${hotspot.countY})`} pointerEvents="none">
-        <rect x={-countWidth / 2} y={-18} width={countWidth} height={36} rx={18} />
-        <text textAnchor="middle" dominantBaseline="central">
-          {countText}
-        </text>
-      </g>
-    </g>
-  );
-}
-
-function VennTargetShape({ element, target }: { element: VennElement; target?: Hotspot["target"] }) {
-  const shape = target || {
-    type: element.type === "ellipse" ? "ellipse" : "rectangle",
-    x: element.x,
-    y: element.y,
-    width: element.width,
-    height: element.height,
-    rx: element.roundness ? 22 : 0
-  };
-  if (shape.type === "ellipse") {
-    return <ellipse className="venn-target-shape" cx={shape.x + shape.width / 2} cy={shape.y + shape.height / 2} rx={shape.width / 2} ry={shape.height / 2} />;
-  }
-
-  return <rect className="venn-target-shape" x={shape.x} y={shape.y} width={shape.width} height={shape.height} rx={shape.rx || 0} />;
 }
 
 function ThesisListItem({ record, active, onSelect }: { record: ThesisRecord; active: boolean; onSelect: () => void }) {
@@ -708,6 +565,82 @@ function ThesisDetail({ record }: { record: ThesisRecord }) {
 
       <p className="source-note">Summary generated from public metadata and abstract. Verify the original thesis before citing or reusing details.</p>
     </article>
+  );
+}
+
+function BokExplanation({ element, relatedElements }: { element: BokElementContent; relatedElements: BokElementContent[] }) {
+  return (
+    <article>
+      <div className="detail-kicker">
+        <span>{element.kind === "method" ? "Method region" : "Application area"}</span>
+        <span>{element.id}</span>
+      </div>
+      <h2>{element.title}</h2>
+      <p className="subtitle">{element.definition}</p>
+
+      <section className="summary-block">
+        <h3>Where it sits</h3>
+        <p>{element.relationship}</p>
+      </section>
+
+      <BokListSection title="Common techniques and examples" items={element.examples} />
+      <BokListSection title="TBM use cases" items={element.useCases} />
+      <BokListSection title="Watch for" items={element.cautions} />
+
+      {relatedElements.length ? (
+        <section className="summary-block">
+          <h3>Related elements</h3>
+          <div className="related-links">
+            {relatedElements.map((related) => (
+              <a key={related.id} className="related-link" href={routeToHash({ page: "overview", slug: related.slug })}>
+                {related.title}
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </article>
+  );
+}
+
+function BokListSection({ title, items }: { title: string; items: string[] }) {
+  return (
+    <section className="summary-block">
+      <h3>{title}</h3>
+      <ul className="bok-list">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function SiteFooter({ activePage }: { activePage: AppRoute["page"] }) {
+  return (
+    <footer className="site-footer-lite">
+      <div className="footer-inner">
+        <div>
+          <h2>{activePage === "overview" ? "TBM Machine Learning BoK Overview" : "TBM Machine Learning Thesis Explorer"}</h2>
+          <p>
+            {activePage === "overview"
+              ? "A navigable teaching layer for the Machine Learning Body of Knowledge overview."
+              : "Generated from public TU Delft Repository metadata. Thesis files are linked, not mirrored."}
+          </p>
+        </div>
+        {activePage === "overview" ? (
+          <a href="#theses">
+            <BookOpen aria-hidden="true" />
+            Thesis explorer
+          </a>
+        ) : (
+          <a href="https://repository.tudelft.nl/" target="_blank" rel="noreferrer">
+            <ExternalLink aria-hidden="true" />
+            TU Delft Repository
+          </a>
+        )}
+      </div>
+    </footer>
   );
 }
 

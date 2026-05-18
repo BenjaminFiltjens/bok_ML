@@ -112,3 +112,16 @@ export interface ExplorerFilters {
   includeArticles: boolean;
   sort: "relevance" | "year-desc" | "year-asc" | "title";
 }
+
+export interface BokElementContent {
+  id: string;
+  slug: string;
+  kind: "method" | "domain";
+  title: string;
+  definition: string;
+  relationship: string;
+  examples: string[];
+  useCases: string[];
+  cautions: string[];
+  relatedIds: string[];
+}
