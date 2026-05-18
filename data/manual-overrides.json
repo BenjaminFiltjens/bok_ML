@@ -1,0 +1,13 @@
+{
+  "include": [],
+  "exclude": [],
+  "records": {
+    "002f23e0-99c5-463e-850b-ec4986774cc8": {
+      "include": true,
+      "methods": ["Clustering", "Optimization with ML"],
+      "methodFamilies": ["Machine Learning", "Unsupervised learning"],
+      "applicationDomains": ["Energy", "Transport and logistics"],
+      "dominantApplicationDomain": "TLO"
+    }
+  }
+}

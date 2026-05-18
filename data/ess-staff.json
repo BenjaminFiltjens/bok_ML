@@ -1,0 +1,2707 @@
+{
+  "generatedAt": "2026-05-18T15:07:10.861Z",
+  "sourceUrl": "https://www.tudelft.nl/en/tpm/our-faculty/departments/engineering-systems-and-services/people",
+  "note": "Generated from the public TU Delft ESS people page and linked TU Delft staff profiles. Used as the hard inclusion list for harvested records.",
+  "stats": {
+    "staffFound": 146,
+    "staffWithProfile": 119,
+    "staffWithSection": 110,
+    "staffWithoutSection": 36
+  },
+  "sectionPatterns": [
+    {
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "patterns": [
+        "Transport and Logistics",
+        "Transport en Logistiek",
+        "Transport, Mobility and Logistics"
+      ]
+    },
+    {
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "patterns": [
+        "Energy and Industry",
+        "Energie en Industrie"
+      ]
+    },
+    {
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "patterns": [
+        "Information and Communication Technology",
+        "Information Communication Technology",
+        "Informatie en Communicatie Technologie",
+        "Informatie en Communicatietechnologie"
+      ]
+    },
+    {
+      "section": "System Engineering",
+      "domain": "SDM",
+      "patterns": [
+        "System Engineering",
+        "Systems Engineering"
+      ]
+    },
+    {
+      "section": "Policy Analysis",
+      "domain": "SDM",
+      "patterns": [
+        "Policy Analysis",
+        "Beleidsanalyse"
+      ]
+    }
+  ],
+  "staff": [
+    {
+      "displayName": "Aaron Ding",
+      "rawNames": [
+        "Dr. A.Y. (Aaron) Ding"
+      ],
+      "aliases": [
+        "A.Y. (Aaron) Ding",
+        "A.Y. Aaron Ding",
+        "A.Y. Ding",
+        "Aaron Ding",
+        "Dr. A.Y. (Aaron) Ding"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/aaron.ding/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/44087064-39e8-4615-95d1-863768f9480d",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/aaron.ding/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Abdallah Nour El Din",
+      "rawNames": [
+        "Abdallah Nour El Din"
+      ],
+      "aliases": [
+        "Abdallah Nour El Din"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ad van Wijk",
+      "rawNames": [
+        "Prof.dr. A.J.M. (Ad) van Wijk"
+      ],
+      "aliases": [
+        "Ad van Wijk",
+        "Prof. A.J.M. (Ad) van Wijk",
+        "Prof. A.J.M. Ad van Wijk",
+        "Prof. A.J.M. van Wijk",
+        "Prof.dr. A.J.M. (Ad) van Wijk"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.j.m.vanwijk/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/0699b7f6-471d-4002-8401-bba1fac432ec",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/a.j.m.vanwijk/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Albert Caban",
+      "rawNames": [
+        "A. (Albert) Caban MSc"
+      ],
+      "aliases": [
+        "A. (Albert) Caban",
+        "A. (Albert) Caban MSc",
+        "A. Albert Caban",
+        "A. Caban",
+        "Albert Caban"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.caban/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/222def2b-b43c-46ee-a8e4-a03bd3beebe1",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/a.caban/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ali Abdelshafy",
+      "rawNames": [
+        "Dr. A. (Ali) Abdelshafy"
+      ],
+      "aliases": [
+        "A. (Ali) Abdelshafy",
+        "A. Abdelshafy",
+        "A. Ali Abdelshafy",
+        "Ali Abdelshafy",
+        "Dr. A. (Ali) Abdelshafy"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.abdelshafy/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/9b16a3cd-3123-48ff-80cc-da501e9fb24b",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/a.abdelshafy/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Alison Kelly",
+      "rawNames": [
+        "A. (Alison) Kelly"
+      ],
+      "aliases": [
+        "A. (Alison) Kelly",
+        "A. Alison Kelly",
+        "A. Kelly",
+        "Alison Kelly"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Anas Damoun",
+      "rawNames": [
+        "A. (Anas) Damoun"
+      ],
+      "aliases": [
+        "A. (Anas) Damoun",
+        "A. Anas Damoun",
+        "A. Damoun",
+        "Anas Damoun"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Annamarie de Ruijter",
+      "rawNames": [
+        "A.M. (Annamarie) de Ruijter"
+      ],
+      "aliases": [
+        "A.M. (Annamarie) de Ruijter",
+        "A.M. Annamarie de Ruijter",
+        "A.M. de Ruijter",
+        "Annamarie de Ruijter"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.m.deruijter/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/dfd7888d-ee34-41a6-89c3-0bfabb311887",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/a.m.deruijter/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Anneke Zuiderwijk- van Eijk",
+      "rawNames": [
+        "Dr. A.M.G. (Anneke) Zuiderwijk- van Eijk"
+      ],
+      "aliases": [
+        "A.M.G. (Anneke) Zuiderwijk- van Eijk",
+        "A.M.G. Anneke Zuiderwijk- van Eijk",
+        "A.M.G. Zuiderwijk- van Eijk",
+        "Anneke Zuiderwijk- van Eijk",
+        "Dr. A.M.G. (Anneke) Zuiderwijk- van Eijk"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.m.g.zuiderwijk.vaneijk/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/bda8bfc3-ac3a-4f93-bb30-57c98dfbacb1",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/a.m.g.zuiderwijk.vaneijk/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Annika Herth",
+      "rawNames": [
+        "A. (Annika) Herth"
+      ],
+      "aliases": [
+        "A. (Annika) Herth",
+        "A. Annika Herth",
+        "A. Herth",
+        "Annika Herth"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Anshuman Panigrahi",
+      "rawNames": [
+        "A. (Anshuman) Panigrahi"
+      ],
+      "aliases": [
+        "A. (Anshuman) Panigrahi",
+        "A. Anshuman Panigrahi",
+        "A. Panigrahi",
+        "Anshuman Panigrahi"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.panigrahi/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/d383f824-ecf5-4d5b-aaf3-d210bfbdf9b9",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/a.panigrahi/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Antonia Sattlegger",
+      "rawNames": [
+        "Antonia Sattlegger"
+      ],
+      "aliases": [
+        "Antonia Sattlegger"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Arina Soboleva",
+      "rawNames": [
+        "A. (Arina) Soboleva"
+      ],
+      "aliases": [
+        "A. (Arina) Soboleva",
+        "A. Arina Soboleva",
+        "A. Soboleva",
+        "Arina Soboleva"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.soboleva/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/759e0a1a-6876-4bdb-9776-8f4950691479",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/a.soboleva/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Arka Bhattacharyya",
+      "rawNames": [
+        "A. (Arka) Bhattacharyya"
+      ],
+      "aliases": [
+        "A. (Arka) Bhattacharyya",
+        "A. Arka Bhattacharyya",
+        "A. Bhattacharyya",
+        "Arka Bhattacharyya"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.bhattacharyya/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/a758084e-1265-4206-9e89-9df4e7508bc5",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/a.bhattacharyya/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Aryasatya Adyatama",
+      "rawNames": [
+        "A. (Aryasatya) Adyatama"
+      ],
+      "aliases": [
+        "A. (Aryasatya) Adyatama",
+        "A. Adyatama",
+        "A. Aryasatya Adyatama",
+        "Aryasatya Adyatama"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/a.adyatama/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/908b882c-361f-43a3-9617-03f3347cb486",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/a.adyatama/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Baiba Pudane",
+      "rawNames": [
+        "Dr. B. (Baiba) Pudane"
+      ],
+      "aliases": [
+        "B. (Baiba) Pudane",
+        "B. Baiba Pudane",
+        "B. Pudane",
+        "Baiba Pudane",
+        "Dr. B. (Baiba) Pudane"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/b.pudane/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/61df838c-ca56-4e09-a4db-8b7bb4ffb8ae",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/b.pudane/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Benjamin Filtjens",
+      "rawNames": [
+        "Dr. B. (Benjamin) Filtjens"
+      ],
+      "aliases": [
+        "B. (Benjamin) Filtjens",
+        "B. Benjamin Filtjens",
+        "B. Filtjens",
+        "Benjamin Filtjens",
+        "Dr. B. (Benjamin) Filtjens"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/b.filtjens/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/d443e959-46be-4d56-8493-b13e3ebcbcc8",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/b.filtjens/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Bert van Wee",
+      "rawNames": [
+        "Prof.dr. G.P. (Bert) van Wee"
+      ],
+      "aliases": [
+        "Bert van Wee",
+        "Prof. G.P. (Bert) van Wee",
+        "Prof. G.P. Bert van Wee",
+        "Prof. G.P. van Wee",
+        "Prof.dr. G.P. (Bert) van Wee"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/g.p.vanwee/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/7127e201-923a-45cd-a960-d214b9ae6460",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/g.p.vanwee/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Bona Lubis",
+      "rawNames": [
+        "B. (Bona) Lubis"
+      ],
+      "aliases": [
+        "B. (Bona) Lubis",
+        "B. Bona Lubis",
+        "B. Lubis",
+        "Bona Lubis"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/b.lubis/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/467d1700-f7ce-4bc2-ad80-88f1e8a728f5",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/b.lubis/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Boriana Rukanova",
+      "rawNames": [
+        "Dr. B.D. (Boriana) Rukanova"
+      ],
+      "aliases": [
+        "B.D. (Boriana) Rukanova",
+        "B.D. Boriana Rukanova",
+        "B.D. Rukanova",
+        "Boriana Rukanova",
+        "Dr. B.D. (Boriana) Rukanova"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/b.d.rukanova/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/06b0193c-9d2d-4bbe-8564-d12689b6db69",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Budi Satrio",
+      "rawNames": [
+        "B. (Budi) Satrio"
+      ],
+      "aliases": [
+        "B. (Budi) Satrio",
+        "B. Budi Satrio",
+        "B. Satrio",
+        "Budi Satrio"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/b.satrio/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/92efee94-dad0-4b5a-bf2a-0b752a5f9d95",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/b.satrio/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Caroline Figueroa",
+      "rawNames": [
+        "C. (Caroline) Figueroa PhD"
+      ],
+      "aliases": [
+        "C. (Caroline) Figueroa",
+        "C. (Caroline) Figueroa PhD",
+        "C. Caroline Figueroa",
+        "C. Figueroa",
+        "Caroline Figueroa"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/c.figueroa/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/30b0e471-4b56-4f23-9727-82071b1944fe",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/c.figueroa/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Cherelle Nieuwenhuis",
+      "rawNames": [
+        "Cherelle Nieuwenhuis"
+      ],
+      "aliases": [
+        "Cherelle Nieuwenhuis"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/c.nieuwenhuis/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/dcc4eaaf-8352-4b46-b80f-a6f410dbd5b7",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Dan Hawkins",
+      "rawNames": [
+        "D.D.A. (Dan) Hawkins"
+      ],
+      "aliases": [
+        "D.D.A. (Dan) Hawkins",
+        "D.D.A. Dan Hawkins",
+        "D.D.A. Hawkins",
+        "Dan Hawkins"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/d.d.a.hawkins/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/bcaf1fb2-f0c5-4b75-bf18-1145978b1490",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/d.d.a.hawkins/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Dimitris Xevgenos",
+      "rawNames": [
+        "Dr. D. (Dimitris) Xevgenos"
+      ],
+      "aliases": [
+        "D. (Dimitris) Xevgenos",
+        "D. Dimitris Xevgenos",
+        "D. Xevgenos",
+        "Dimitris Xevgenos",
+        "Dr. D. (Dimitris) Xevgenos"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/d.xevgenos/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/6efcbbc4-5919-422e-82fd-564151cd5458",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/d.xevgenos/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Dr.ir. S.E. Tanzer BA",
+      "rawNames": [
+        "Dr.ir. S.E. Tanzer BA"
+      ],
+      "aliases": [
+        "Dr. S.E. Tanzer",
+        "Dr.ir. S.E. Tanzer BA"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.e.tanzer/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/3f473667-905b-4a0b-b26d-b50b16259ed3",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/s.e.tanzer/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ellen Schwencke",
+      "rawNames": [
+        "Ellen Schwencke"
+      ],
+      "aliases": [
+        "Ellen Schwencke"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.schwencke.karlas/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/e4bec66a-cd8c-4a4e-99d5-3a86c134d5d6",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ellen Vendrig",
+      "rawNames": [
+        "Ellen Vendrig"
+      ],
+      "aliases": [
+        "Ellen Vendrig"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.m.m.vendrig/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/12519ea6-c95f-4b0a-9edc-3d2952ec788d",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ema Gusheva",
+      "rawNames": [
+        "E. (Ema) Gusheva"
+      ],
+      "aliases": [
+        "E. (Ema) Gusheva",
+        "E. Ema Gusheva",
+        "E. Gusheva",
+        "Ema Gusheva"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.gusheva/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/3061136e-f96d-4683-a468-7551a48b225f",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/e.gusheva/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Emile Chappin",
+      "rawNames": [
+        "Emile Chappin",
+        "Dr.ir. E.J.L. (Emile) Chappin"
+      ],
+      "aliases": [
+        "Dr. E.J.L. (Emile) Chappin",
+        "Dr. E.J.L. Chappin",
+        "Dr. E.J.L. Emile Chappin",
+        "Dr.ir. E.J.L. (Emile) Chappin",
+        "Emile Chappin"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.j.l.chappin/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/b95bb808-74f8-4f2b-bb73-986b81215ef8",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/e.j.l.chappin/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Emyana Sirait",
+      "rawNames": [
+        "E.R.E. (Emyana) Sirait MSc"
+      ],
+      "aliases": [
+        "E.R.E. (Emyana) Sirait",
+        "E.R.E. (Emyana) Sirait MSc",
+        "E.R.E. Emyana Sirait",
+        "E.R.E. Sirait",
+        "Emyana Sirait"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.r.e.sirait/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/c24484f0-ba94-40e6-950c-9dbf6371bf65",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/e.r.e.sirait/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Eric Molin",
+      "rawNames": [
+        "Dr. E.J.E. (Eric) Molin"
+      ],
+      "aliases": [
+        "Dr. E.J.E. (Eric) Molin",
+        "E.J.E. (Eric) Molin",
+        "E.J.E. Eric Molin",
+        "E.J.E. Molin",
+        "Eric Molin"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.j.e.molin/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/59f52c01-053b-4a46-a871-da6f3266ae64",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/e.j.e.molin/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Erik Lopez Basto",
+      "rawNames": [
+        "E. (Erik) Lopez Basto"
+      ],
+      "aliases": [
+        "E. (Erik) Lopez Basto",
+        "E. Erik Lopez Basto",
+        "E. Lopez Basto",
+        "Erik Lopez Basto"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.lopezbasto/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/70172bfa-4d96-4dc5-abff-cfb0f704ab47",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/e.lopezbasto/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Esra Zorer",
+      "rawNames": [
+        "Esra Zorer"
+      ],
+      "aliases": [
+        "Esra Zorer"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Eva De Winkel",
+      "rawNames": [
+        "E. (Eva) De Winkel"
+      ],
+      "aliases": [
+        "E. (Eva) De Winkel",
+        "E. De Winkel",
+        "E. Eva De Winkel",
+        "Eva De Winkel"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/e.dewinkel/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/8e3a42da-ad8a-4101-96a6-959f3e90da20",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/e.dewinkel/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Fanchao Liao",
+      "rawNames": [
+        "Dr.ir. F. (Fanchao) Liao MSc"
+      ],
+      "aliases": [
+        "Dr. F. (Fanchao) Liao",
+        "Dr. F. Fanchao Liao",
+        "Dr. F. Liao",
+        "Dr.ir. F. (Fanchao) Liao MSc",
+        "Fanchao Liao"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/f.liao/",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": "fetch failed while fetching https://www.tudelft.nl/staff/f.liao/"
+    },
+    {
+      "displayName": "Fernando Kleiman",
+      "rawNames": [
+        "F. (Fernando) Kleiman"
+      ],
+      "aliases": [
+        "F. (Fernando) Kleiman",
+        "F. Fernando Kleiman",
+        "F. Kleiman",
+        "Fernando Kleiman"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/f.kleiman/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/6e2c9cd7-3569-422a-a868-510d1d198f1b",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/f.kleiman/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Francesco Lombardi",
+      "rawNames": [
+        "Dr. F. (Francesco) Lombardi"
+      ],
+      "aliases": [
+        "Dr. F. (Francesco) Lombardi",
+        "F. (Francesco) Lombardi",
+        "F. Francesco Lombardi",
+        "F. Lombardi",
+        "Francesco Lombardi"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/f.lombardi/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/aba4c304-c0b9-42b7-ac2d-d6b5084748a3",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/f.lombardi/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Francesco Sanvito",
+      "rawNames": [
+        "F. (Francesco) Sanvito"
+      ],
+      "aliases": [
+        "F. (Francesco) Sanvito",
+        "F. Francesco Sanvito",
+        "F. Sanvito",
+        "Francesco Sanvito"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/f.sanvito/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/c1656f99-05ce-41f2-99e1-69aef67c1522",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/f.sanvito/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Francisco Garrido-Valenzuela",
+      "rawNames": [
+        "F. O. (Francisco) Garrido-Valenzuela"
+      ],
+      "aliases": [
+        "F. O. (Francisco) Garrido-Valenzuela",
+        "F. O. Francisco Garrido-Valenzuela",
+        "F. O. Garrido-Valenzuela",
+        "Francisco Garrido-Valenzuela"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/f.garridov/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/a0bc4b9b-1273-4633-b1f4-d918d118924f",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/f.garridov/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Franziska Bock",
+      "rawNames": [
+        "Franziska Bock"
+      ],
+      "aliases": [
+        "Franziska Bock"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Gabriel Nova",
+      "rawNames": [
+        "G. (Gabriel) Nova MSc"
+      ],
+      "aliases": [
+        "G. (Gabriel) Nova",
+        "G. (Gabriel) Nova MSc",
+        "G. Gabriel Nova",
+        "G. Nova",
+        "Gabriel Nova"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/g.nova/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/27e12a80-7618-4d83-ac2e-68fd815d78ee",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/g.nova/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Geqie Sun",
+      "rawNames": [
+        "Geqie Sun"
+      ],
+      "aliases": [
+        "Geqie Sun"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Gijs van der Wielen",
+      "rawNames": [
+        "Gijs van der Wielen"
+      ],
+      "aliases": [
+        "Gijs van der Wielen"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Gijsbert Korevaar",
+      "rawNames": [
+        "Dr.ir. G. (Gijsbert) Korevaar"
+      ],
+      "aliases": [
+        "Dr. G. (Gijsbert) Korevaar",
+        "Dr. G. Gijsbert Korevaar",
+        "Dr. G. Korevaar",
+        "Dr.ir. G. (Gijsbert) Korevaar",
+        "Gijsbert Korevaar"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/g.korevaar/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/69f93467-884f-4221-b775-ff1d314ec201",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/g.korevaar/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Gilang Ramadhan, SST, MPA, CIA",
+      "rawNames": [
+        "M.G. (Gilang) Ramadhan, SST, MPA, CIA"
+      ],
+      "aliases": [
+        "Gilang Ramadhan, SST, MPA, CIA",
+        "M.G. (Gilang) Ramadhan, SST, MPA, CIA",
+        "M.G. Gilang Ramadhan, SST, MPA, CIA",
+        "M.G. Ramadhan, SST, MPA, CIA"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Herbert van Even",
+      "rawNames": [
+        "H. (Herbert) van Even"
+      ],
+      "aliases": [
+        "H. (Herbert) van Even",
+        "H. Herbert van Even",
+        "H. van Even",
+        "Herbert van Even"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Hong Yan",
+      "rawNames": [
+        "Hong Yan"
+      ],
+      "aliases": [
+        "Hong Yan"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ilse Oonk",
+      "rawNames": [
+        "Ilse Oonk"
+      ],
+      "aliases": [
+        "Ilse Oonk"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/i.oonk/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/45a45e3f-8ed5-4f2a-89bf-aa278a750754",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ingrid Sánchez Jiménez",
+      "rawNames": [
+        "Ingrid Sánchez Jiménez"
+      ],
+      "aliases": [
+        "Ingrid Sánchez Jiménez"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ini Kong",
+      "rawNames": [
+        "I. (Ini) Kong"
+      ],
+      "aliases": [
+        "I. (Ini) Kong",
+        "I. Ini Kong",
+        "I. Kong",
+        "Ini Kong"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Inna Stepchuk",
+      "rawNames": [
+        "Inna Stepchuk"
+      ],
+      "aliases": [
+        "Inna Stepchuk"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Isabel Franke",
+      "rawNames": [
+        "I.F. (Isabel) Franke"
+      ],
+      "aliases": [
+        "I.F. (Isabel) Franke",
+        "I.F. Franke",
+        "I.F. Isabel Franke",
+        "Isabel Franke"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/i.f.franke/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/b8ce6468-6d07-46ea-9386-3985a158897e",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/i.f.franke/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ivan Ruiz Manuel",
+      "rawNames": [
+        "Ir. I. (Ivan) Ruiz Manuel"
+      ],
+      "aliases": [
+        "I. (Ivan) Ruiz Manuel",
+        "I. Ivan Ruiz Manuel",
+        "I. Ruiz Manuel",
+        "Ir. I. (Ivan) Ruiz Manuel",
+        "Ivan Ruiz Manuel"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/i.ruizmanuel/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/47c84dd3-e739-4223-9470-f6d245f233fe",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/i.ruizmanuel/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ivo Bouwmans",
+      "rawNames": [
+        "Dr.ir. I. (Ivo) Bouwmans"
+      ],
+      "aliases": [
+        "Dr. I. (Ivo) Bouwmans",
+        "Dr. I. Bouwmans",
+        "Dr. I. Ivo Bouwmans",
+        "Dr.ir. I. (Ivo) Bouwmans",
+        "Ivo Bouwmans"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/i.bouwmans/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/dfb6a699-561d-4c8b-b524-1aba698060ba",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/i.bouwmans/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jaco Quist",
+      "rawNames": [
+        "Dr.ir. J.N. (Jaco) Quist"
+      ],
+      "aliases": [
+        "Dr. J.N. (Jaco) Quist",
+        "Dr. J.N. Jaco Quist",
+        "Dr. J.N. Quist",
+        "Dr.ir. J.N. (Jaco) Quist",
+        "Jaco Quist"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.n.quist/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/986567e7-6287-4325-b439-d20f141f017b",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/j.n.quist/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jafar Rezaei",
+      "rawNames": [
+        "Prof.dr. J. (Jafar) Rezaei"
+      ],
+      "aliases": [
+        "Jafar Rezaei",
+        "Prof. J. (Jafar) Rezaei",
+        "Prof. J. Jafar Rezaei",
+        "Prof. J. Rezaei",
+        "Prof.dr. J. (Jafar) Rezaei"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.rezaei/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/4f28f3c6-ed52-478d-94ac-1176e14aea6f",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.rezaei/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "James Tonny Manalal",
+      "rawNames": [
+        "J.T. (James Tonny) Manalal"
+      ],
+      "aliases": [
+        "J.T. (James Tonny) Manalal",
+        "J.T. James Tonny Manalal",
+        "J.T. Manalal",
+        "James Tonny Manalal"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.t.manalal/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/3c7f144b-469e-4af0-bdbc-91dc35c7a4ad",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/j.t.manalal/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jan Anne Annema",
+      "rawNames": [
+        "Dr. J.A. (Jan Anne) Annema"
+      ],
+      "aliases": [
+        "Dr. J.A. (Jan Anne) Annema",
+        "J.A. (Jan Anne) Annema",
+        "J.A. Annema",
+        "J.A. Jan Anne Annema",
+        "Jan Anne Annema"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.a.annema/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/7f3bc419-b7dc-4742-b852-ba3061993939",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.a.annema/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jan van den Berg",
+      "rawNames": [
+        "Emeritus Prof.dr.ir. J. (Jan) van den Berg"
+      ],
+      "aliases": [
+        "Emeritus Prof.dr.ir. J. (Jan) van den Berg",
+        "Jan van den Berg",
+        "Prof.dr. J. (Jan) van den Berg",
+        "Prof.dr. J. Jan van den Berg",
+        "Prof.dr. J. van den Berg"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.vandenberg/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/d4af0795-2998-411e-9aa6-9d9f361905e0",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jan-Jelle Witte",
+      "rawNames": [
+        "Drs. J.J. (Jan-Jelle) Witte"
+      ],
+      "aliases": [
+        "Drs. J.J. (Jan-Jelle) Witte",
+        "J.J. (Jan-Jelle) Witte",
+        "J.J. Jan-Jelle Witte",
+        "J.J. Witte",
+        "Jan-Jelle Witte"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jann Launer",
+      "rawNames": [
+        "Jann Launer"
+      ],
+      "aliases": [
+        "Jann Launer"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.a.c.launer/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/49a40363-9a84-47a4-b368-809a6be4cf71",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/j.a.c.launer/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jasper Verschuur",
+      "rawNames": [
+        "J. (Jasper) Verschuur"
+      ],
+      "aliases": [
+        "J. (Jasper) Verschuur",
+        "J. Jasper Verschuur",
+        "J. Verschuur",
+        "Jasper Verschuur"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.verschuur/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/7a7ccc4b-5247-4c41-af36-bfcbe6ca4c08",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.verschuur/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jerico Bakhuis",
+      "rawNames": [
+        "Ir. J.J. (Jerico) Bakhuis"
+      ],
+      "aliases": [
+        "Ir. J.J. (Jerico) Bakhuis",
+        "J.J. (Jerico) Bakhuis",
+        "J.J. Bakhuis",
+        "J.J. Jerico Bakhuis",
+        "Jerico Bakhuis"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.j.bakhuis.1/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/ec45a454-a4dc-4b6d-b3b5-10429a8f3ca4",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/j.j.bakhuis.1/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jeroen Delfos",
+      "rawNames": [
+        "Ir. J. (Jeroen) Delfos"
+      ],
+      "aliases": [
+        "Ir. J. (Jeroen) Delfos",
+        "J. (Jeroen) Delfos",
+        "J. Delfos",
+        "J. Jeroen Delfos",
+        "Jeroen Delfos"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.delfos/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/359c36a1-fb51-4073-aab2-c71e496d6260",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.delfos/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jolien Ubacht",
+      "rawNames": [
+        "Jolien Ubacht",
+        "Dr. J. (Jolien) Ubacht"
+      ],
+      "aliases": [
+        "Dr. J. (Jolien) Ubacht",
+        "J. (Jolien) Ubacht",
+        "J. Jolien Ubacht",
+        "J. Ubacht",
+        "Jolien Ubacht"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.ubacht/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/9f9a721c-3476-422e-bd4c-479dc1026ddd",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/j.ubacht/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Jonathan Schmid",
+      "rawNames": [
+        "J. (Jonathan) Schmid"
+      ],
+      "aliases": [
+        "J. (Jonathan) Schmid",
+        "J. Jonathan Schmid",
+        "J. Schmid",
+        "Jonathan Schmid"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.schmid/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/cc4aeee4-467e-46ad-aaa9-9a40b96dfd1a",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.schmid/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Josephine Vos",
+      "rawNames": [
+        "Ir. J.M. (Josephine) Vos"
+      ],
+      "aliases": [
+        "Ir. J.M. (Josephine) Vos",
+        "J.M. (Josephine) Vos",
+        "J.M. Josephine Vos",
+        "J.M. Vos",
+        "Josephine Vos"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.m.vos/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/24adad62-bc23-47f8-a8d1-421603a5f661",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/j.m.vos/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Josue Godwe Gnowa",
+      "rawNames": [
+        "J. (Josue) Godwe Gnowa"
+      ],
+      "aliases": [
+        "J. (Josue) Godwe Gnowa",
+        "J. Godwe Gnowa",
+        "J. Josue Godwe Gnowa",
+        "Josue Godwe Gnowa"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Julien Magana",
+      "rawNames": [
+        "J.M. (Julien) Magana"
+      ],
+      "aliases": [
+        "J.M. (Julien) Magana",
+        "J.M. Julien Magana",
+        "J.M. Magana",
+        "Julien Magana"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.m.magana/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/617586c8-d762-40f8-a730-2256065cff4d",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.m.magana/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Juliette Li",
+      "rawNames": [
+        "Q. (Juliette) Li"
+      ],
+      "aliases": [
+        "Juliette Li",
+        "Q. (Juliette) Li",
+        "Q. Juliette Li",
+        "Q. Li"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/q.li.12/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/7c589dd6-d702-4432-ba75-1ccd562c1f77",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/q.li.12/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kailas Honasoge",
+      "rawNames": [
+        "K.S. (Kailas) Honasoge MSc"
+      ],
+      "aliases": [
+        "K.S. (Kailas) Honasoge",
+        "K.S. (Kailas) Honasoge MSc",
+        "K.S. Honasoge",
+        "K.S. Kailas Honasoge",
+        "Kailas Honasoge"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.s.honasoge/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/113af43e-ee2d-4036-91f7-a35d209d734c",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/k.s.honasoge/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kamaldeen Adekola",
+      "rawNames": [
+        "K.K. (Kamaldeen) Adekola"
+      ],
+      "aliases": [
+        "K.K. (Kamaldeen) Adekola",
+        "K.K. Adekola",
+        "K.K. Kamaldeen Adekola",
+        "Kamaldeen Adekola"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.k.adekola/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/56144bfb-5784-4ffa-a2ba-0d30baef22b5",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/k.k.adekola/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kateřina Staňková",
+      "rawNames": [
+        "Kateřina Staňková",
+        "Dr. K. (Kateřina) Staňková"
+      ],
+      "aliases": [
+        "Dr. K. (Kateřina) Staňková",
+        "K. (Kateřina) Staňková",
+        "K. Kateřina Staňková",
+        "K. Staňková",
+        "Kateřina Staňková"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.stankova/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/59470501-f1af-435c-9cf0-3e6eef37013a",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/k.stankova/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kathleen Guan",
+      "rawNames": [
+        "K. (Kathleen) Guan"
+      ],
+      "aliases": [
+        "K. (Kathleen) Guan",
+        "K. Guan",
+        "K. Kathleen Guan",
+        "Kathleen Guan"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.guan/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/4913a5f3-c04a-4194-8773-3138b79ceb74",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/k.guan/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kenneth Bruninx",
+      "rawNames": [
+        "Dr. ir. K. (Kenneth) Bruninx"
+      ],
+      "aliases": [
+        "Dr. ir. K. (Kenneth) Bruninx",
+        "K. (Kenneth) Bruninx",
+        "K. Bruninx",
+        "K. Kenneth Bruninx",
+        "Kenneth Bruninx"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.bruninx/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/5640e2b3-1960-48bf-a2bc-2490c11dccb5",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/k.bruninx/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kevin Goes",
+      "rawNames": [
+        "K. (Kevin) Goes MSc"
+      ],
+      "aliases": [
+        "K. (Kevin) Goes",
+        "K. (Kevin) Goes MSc",
+        "K. Goes",
+        "K. Kevin Goes",
+        "Kevin Goes"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.goes/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/5ee007e1-4dc9-490c-91ce-63a4ccd457df",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/k.goes/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kian Jafari Nejad",
+      "rawNames": [
+        "K. (Kian) Jafari Nejad"
+      ],
+      "aliases": [
+        "K. (Kian) Jafari Nejad",
+        "K. Jafari Nejad",
+        "K. Kian Jafari Nejad",
+        "Kian Jafari Nejad"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Kornelis Blok",
+      "rawNames": [
+        "Prof.dr. K. (Kornelis) Blok"
+      ],
+      "aliases": [
+        "Kornelis Blok",
+        "Prof. K. (Kornelis) Blok",
+        "Prof. K. Blok",
+        "Prof. K. Kornelis Blok",
+        "Prof.dr. K. (Kornelis) Blok"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/k.blok/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/61f9bedb-85c9-43a0-bb35-6f48b762789b",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/k.blok/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Laurens de Vries",
+      "rawNames": [
+        "Prof.dr.ir. L.J. (Laurens) de Vries"
+      ],
+      "aliases": [
+        "Laurens de Vries",
+        "Prof.dr. L.J. (Laurens) de Vries",
+        "Prof.dr. L.J. de Vries",
+        "Prof.dr. L.J. Laurens de Vries",
+        "Prof.dr.ir. L.J. (Laurens) de Vries"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.j.devries/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/57dc858e-6c85-414a-a261-fb4fac59eec6",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/l.j.devries/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Laurens Frowijn",
+      "rawNames": [
+        "L.S.F. (Laurens) Frowijn MSc"
+      ],
+      "aliases": [
+        "L.S.F. (Laurens) Frowijn",
+        "L.S.F. (Laurens) Frowijn MSc",
+        "L.S.F. Frowijn",
+        "L.S.F. Laurens Frowijn",
+        "Laurens Frowijn"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.s.f.frowijn/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/69668938-7659-4be3-a11b-2add1e914a85",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/l.s.f.frowijn/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Linda Kamp",
+      "rawNames": [
+        "Dr. L.M. (Linda) Kamp"
+      ],
+      "aliases": [
+        "Dr. L.M. (Linda) Kamp",
+        "L.M. (Linda) Kamp",
+        "L.M. Kamp",
+        "L.M. Linda Kamp",
+        "Linda Kamp"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Lion Cassens",
+      "rawNames": [
+        "L. (Lion) Cassens MSc"
+      ],
+      "aliases": [
+        "L. (Lion) Cassens",
+        "L. (Lion) Cassens MSc",
+        "L. Cassens",
+        "L. Lion Cassens",
+        "Lion Cassens"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.cassens/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/38831549-3026-42d4-afe7-f0d7f0ea0895",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/l.cassens/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Liubov Pilshchikova",
+      "rawNames": [
+        "L. (Liubov) Pilshchikova"
+      ],
+      "aliases": [
+        "L. (Liubov) Pilshchikova",
+        "L. Liubov Pilshchikova",
+        "L. Pilshchikova",
+        "Liubov Pilshchikova"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.pilshchikova/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/060a8272-7dc8-4eef-abe9-353202863b65",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/l.pilshchikova/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Lóránt Tavasszy",
+      "rawNames": [
+        "Prof.dr.ir. L.A. (Lóránt) Tavasszy"
+      ],
+      "aliases": [
+        "Lóránt Tavasszy",
+        "Prof.dr. L.A. (Lóránt) Tavasszy",
+        "Prof.dr. L.A. Lóránt Tavasszy",
+        "Prof.dr. L.A. Tavasszy",
+        "Prof.dr.ir. L.A. (Lóránt) Tavasszy"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.a.tavasszy/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/14d3b4eb-09b7-4fea-84df-f90f8c1c4316",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/l.a.tavasszy/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Lukas Schubotz",
+      "rawNames": [
+        "L.M. (Lukas) Schubotz"
+      ],
+      "aliases": [
+        "L.M. (Lukas) Schubotz",
+        "L.M. Lukas Schubotz",
+        "L.M. Schubotz",
+        "Lukas Schubotz"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.m.schubotz/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/70bccc71-27e4-40e2-baa3-675e14556241",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/l.m.schubotz/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Lydia Stougie",
+      "rawNames": [
+        "Dr.ir. L. (Lydia) Stougie"
+      ],
+      "aliases": [
+        "Dr. L. (Lydia) Stougie",
+        "Dr. L. Lydia Stougie",
+        "Dr. L. Stougie",
+        "Dr.ir. L. (Lydia) Stougie",
+        "Lydia Stougie"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.stougie/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/fed65cda-caa4-4c59-bd4d-63fb41b862ce",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/l.stougie/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Lynn de Jager",
+      "rawNames": [
+        "L.A. (Lynn) de Jager"
+      ],
+      "aliases": [
+        "L.A. (Lynn) de Jager",
+        "L.A. de Jager",
+        "L.A. Lynn de Jager",
+        "Lynn de Jager"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/l.a.dejager/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/f6a8bf8f-58c4-413a-b482-94ee47bdb2f8",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/l.a.dejager/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Maarten ‘t Hoen",
+      "rawNames": [
+        "Ir. M.J.J. (Maarten) ‘t Hoen"
+      ],
+      "aliases": [
+        "Ir. M.J.J. (Maarten) ‘t Hoen",
+        "M.J.J. ‘t Hoen",
+        "M.J.J. (Maarten) ‘t Hoen",
+        "M.J.J. Maarten ‘t Hoen",
+        "Maarten ‘t Hoen"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Maarten Kroesen",
+      "rawNames": [
+        "Maarten Kroesen",
+        "Dr.ir. M. (Maarten) Kroesen"
+      ],
+      "aliases": [
+        "Dr. M. (Maarten) Kroesen",
+        "Dr. M. Kroesen",
+        "Dr. M. Maarten Kroesen",
+        "Dr.ir. M. (Maarten) Kroesen",
+        "Maarten Kroesen"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.kroesen/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/e69595ff-44c2-4d1d-9e4e-a5207f3c74c6",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/m.kroesen/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Machteld van den Broek",
+      "rawNames": [
+        "M.A. (Machteld) van den Broek"
+      ],
+      "aliases": [
+        "M.A. (Machteld) van den Broek",
+        "M.A. Machteld van den Broek",
+        "M.A. van den Broek",
+        "Machteld van den Broek"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.a.vandenbroek/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/34173610-5d9f-4504-b0d7-226f45016fcc",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/m.a.vandenbroek/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Marcel Ludema",
+      "rawNames": [
+        "Ir. M.W. (Marcel) Ludema"
+      ],
+      "aliases": [
+        "Ir. M.W. (Marcel) Ludema",
+        "M.W. (Marcel) Ludema",
+        "M.W. Ludema",
+        "M.W. Marcel Ludema",
+        "Marcel Ludema"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.w.ludema/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/67f9255f-e2f4-45c9-8959-2659afb513c1",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/m.w.ludema/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Marcela Tuler de Oliveira",
+      "rawNames": [
+        "M. (Marcela) Tuler de Oliveira"
+      ],
+      "aliases": [
+        "M. (Marcela) Tuler de Oliveira",
+        "M. Marcela Tuler de Oliveira",
+        "M. Tuler de Oliveira",
+        "Marcela Tuler de Oliveira"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.tulerdeoliveira/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/02e9988d-3552-455f-aca0-d673256b75bd",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/m.tulerdeoliveira/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Margot Weijnen",
+      "rawNames": [
+        "Prof.dr.ir. M.P.C. (Margot) Weijnen"
+      ],
+      "aliases": [
+        "Margot Weijnen",
+        "Prof.dr. M.P.C. (Margot) Weijnen",
+        "Prof.dr. M.P.C. Margot Weijnen",
+        "Prof.dr. M.P.C. Weijnen",
+        "Prof.dr.ir. M.P.C. (Margot) Weijnen"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.p.c.weijnen/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/dd517597-e96b-43f6-a7d7-cc63a8569e57",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/m.p.c.weijnen/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "María del Mar Pérez-Fortes",
+      "rawNames": [
+        "Dr.ir. M.d.M. (María del Mar) Pérez-Fortes"
+      ],
+      "aliases": [
+        "Dr. M.d.M. (María del Mar) Pérez-Fortes",
+        "Dr. M.d.M. María del Mar Pérez-Fortes",
+        "Dr. M.d.M. Pérez-Fortes",
+        "Dr.ir. M.d.M. (María del Mar) Pérez-Fortes",
+        "María del Mar Pérez-Fortes"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.d.m.perez.fortes/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/e143a531-6dba-481c-95d8-4f3810b04b5b",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/m.d.m.perez.fortes/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Marijn Janssen",
+      "rawNames": [
+        "Marijn Janssen",
+        "Prof.dr.ir. M.F.W.H.A. (Marijn) Janssen"
+      ],
+      "aliases": [
+        "Marijn Janssen",
+        "Prof.dr. M.F.W.H.A. (Marijn) Janssen",
+        "Prof.dr. M.F.W.H.A. Janssen",
+        "Prof.dr. M.F.W.H.A. Marijn Janssen",
+        "Prof.dr.ir. M.F.W.H.A. (Marijn) Janssen"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.f.w.h.a.janssen/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/d7c6adde-3cce-471c-b8b1-e6cdd5b18c17",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/m.f.w.h.a.janssen/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Mark de Reuver",
+      "rawNames": [
+        "Dr.ir. G.A. (Mark) de Reuver"
+      ],
+      "aliases": [
+        "Dr. G.A. (Mark) de Reuver",
+        "Dr. G.A. de Reuver",
+        "Dr. G.A. Mark de Reuver",
+        "Dr.ir. G.A. (Mark) de Reuver",
+        "Mark de Reuver"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/g.a.dereuver/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/e13d4007-94ca-4155-a619-d4af67e82864",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/g.a.dereuver/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Martijn de Vries",
+      "rawNames": [
+        "M.O. (Martijn) de Vries MSc"
+      ],
+      "aliases": [
+        "M.O. (Martijn) de Vries",
+        "M.O. (Martijn) de Vries MSc",
+        "M.O. de Vries",
+        "M.O. Martijn de Vries",
+        "Martijn de Vries"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.o.devries/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/00284ca5-e68e-4a5e-9843-54478fb514a3",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/m.o.devries/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Meijun Chen",
+      "rawNames": [
+        "M. (Meijun) Chen"
+      ],
+      "aliases": [
+        "M. (Meijun) Chen",
+        "M. Chen",
+        "M. Meijun Chen",
+        "Meijun Chen"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.chen.4/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/a5d04696-7fc7-40ef-aea9-b2ff38c76f27",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/m.chen.4/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Mohammad Satouri",
+      "rawNames": [
+        "M. (Mohammad) Satouri"
+      ],
+      "aliases": [
+        "M. (Mohammad) Satouri",
+        "M. Mohammad Satouri",
+        "M. Satouri",
+        "Mohammad Satouri"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.satouri/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/34ebf23b-24f8-4bba-bded-2a6e7d9cdf81",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/m.satouri/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Nard Janssens",
+      "rawNames": [
+        "N. (Nard) Janssens"
+      ],
+      "aliases": [
+        "N. (Nard) Janssens",
+        "N. Janssens",
+        "N. Nard Janssens",
+        "Nard Janssens"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/n.janssens/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/d0c46dcf-e45a-48e8-b9d0-74b27fac8e84",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/n.janssens/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Nic Orchard",
+      "rawNames": [
+        "N.A.O. (Nic) Orchard"
+      ],
+      "aliases": [
+        "N.A.O. (Nic) Orchard",
+        "N.A.O. Nic Orchard",
+        "N.A.O. Orchard",
+        "Nic Orchard"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/n.a.o.orchard/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/38aaa4b8-a03c-4686-ba4e-e0cbe6fb5617",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/n.a.o.orchard/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Niek Mouter",
+      "rawNames": [
+        "Dr. Mr. N. (Niek) Mouter MSc"
+      ],
+      "aliases": [
+        "Dr. Mr. N. (Niek) Mouter MSc",
+        "Mr. N. (Niek) Mouter",
+        "Mr. N. Mouter",
+        "Mr. N. Niek Mouter",
+        "Niek Mouter"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/n.mouter/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/1814e8c6-e26f-4af0-88ec-0e30230037ed",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/n.mouter/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Nitesh Bharosa",
+      "rawNames": [
+        "Prof.dr.ir. N. (Nitesh) Bharosa"
+      ],
+      "aliases": [
+        "Nitesh Bharosa",
+        "Prof.dr. N. (Nitesh) Bharosa",
+        "Prof.dr. N. Bharosa",
+        "Prof.dr. N. Nitesh Bharosa",
+        "Prof.dr.ir. N. (Nitesh) Bharosa"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/n.bharosa/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/66f54f99-9f7e-4179-8be0-6e34b12642a2",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/n.bharosa/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Olivier Rikken",
+      "rawNames": [
+        "Dr. Ir. O.K. (Olivier) Rikken, MBA"
+      ],
+      "aliases": [
+        "Dr. Ir. O.K. (Olivier) Rikken, MBA",
+        "O.K. (Olivier) Rikken",
+        "O.K. Olivier Rikken",
+        "O.K. Rikken",
+        "Olivier Rikken"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/o.k.rikken/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/3f25522c-ed31-442f-b72b-8931063d61f1",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/o.k.rikken/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Paola Ibarra Gonzalez",
+      "rawNames": [
+        "Dr. P. (Paola) Ibarra Gonzalez"
+      ],
+      "aliases": [
+        "Dr. P. (Paola) Ibarra Gonzalez",
+        "P. (Paola) Ibarra Gonzalez",
+        "P. Ibarra Gonzalez",
+        "P. Paola Ibarra Gonzalez",
+        "Paola Ibarra Gonzalez"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/p.ibarragonzalez/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/b2f2b007-b770-4eea-9bfc-3b24dce0d324",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/p.ibarragonzalez/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Patrick Stokkink",
+      "rawNames": [
+        "P.S.A. (Patrick) Stokkink"
+      ],
+      "aliases": [
+        "P.S.A. (Patrick) Stokkink",
+        "P.S.A. Patrick Stokkink",
+        "P.S.A. Stokkink",
+        "Patrick Stokkink"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/p.s.a.stokkink/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/93f80111-d03e-4851-bed1-af92dd054c85",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/p.s.a.stokkink/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Peter Braun",
+      "rawNames": [
+        "P. (Peter) Braun"
+      ],
+      "aliases": [
+        "P. (Peter) Braun",
+        "P. Braun",
+        "P. Peter Braun",
+        "Peter Braun"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Petra Heijnen",
+      "rawNames": [
+        "Dr.ir. P.W. (Petra) Heijnen"
+      ],
+      "aliases": [
+        "Dr. P.W. (Petra) Heijnen",
+        "Dr. P.W. Heijnen",
+        "Dr. P.W. Petra Heijnen",
+        "Dr.ir. P.W. (Petra) Heijnen",
+        "Petra Heijnen"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/p.w.heijnen/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/2a69d938-a29f-4bb5-afba-d472e3be5e5f",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/p.w.heijnen/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Prachi Bagave",
+      "rawNames": [
+        "P. (Prachi) Bagave MSc"
+      ],
+      "aliases": [
+        "P. (Prachi) Bagave",
+        "P. (Prachi) Bagave MSc",
+        "P. Bagave",
+        "P. Prachi Bagave",
+        "Prachi Bagave"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/p.bagave/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/83d8c52c-194e-4ba0-8e7c-f510573c8c5c",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/p.bagave/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Qiuju Xue",
+      "rawNames": [
+        "Q. (Qiuju) Xue"
+      ],
+      "aliases": [
+        "Q. (Qiuju) Xue",
+        "Q. Qiuju Xue",
+        "Q. Xue",
+        "Qiuju Xue"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/q.xue/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/1b1c543b-32e8-48a7-9063-d811429f7f48",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/q.xue/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Rachel Benchaya Gans",
+      "rawNames": [
+        "R. (Rachel) Benchaya Gans, LL.M."
+      ],
+      "aliases": [
+        "R. (Rachel) Benchaya Gans",
+        "R. (Rachel) Benchaya Gans, LL.M.",
+        "R. Benchaya Gans",
+        "R. Rachel Benchaya Gans",
+        "Rachel Benchaya Gans"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/r.benchaya.gans/",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": "404 Not Found while fetching https://www.tudelft.nl/staff/r.benchaya.gans/"
+    },
+    {
+      "displayName": "Remco Verzijlbergh",
+      "rawNames": [
+        "Dr.ir. R.A. (Remco) Verzijlbergh"
+      ],
+      "aliases": [
+        "Dr. R.A. (Remco) Verzijlbergh",
+        "Dr. R.A. Remco Verzijlbergh",
+        "Dr. R.A. Verzijlbergh",
+        "Dr.ir. R.A. (Remco) Verzijlbergh",
+        "Remco Verzijlbergh"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/r.a.verzijlbergh/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/28f068d7-8d7b-41e7-8b9d-1f1b4945fb60",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/r.a.verzijlbergh/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Renske van 't Veer",
+      "rawNames": [
+        "Ir. R.J. (Renske) van 't Veer"
+      ],
+      "aliases": [
+        "Ir. R.J. (Renske) van 't Veer",
+        "R.J. (Renske) van 't Veer",
+        "R.J. Renske van 't Veer",
+        "R.J. van 't Veer",
+        "Renske van 't Veer"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/r.j.vantveer/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/66fd217f-2c18-4bd2-8a9b-114ac514a1a8",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/r.j.vantveer/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Riccardo Travaglini",
+      "rawNames": [
+        "R. (Riccardo) Travaglini"
+      ],
+      "aliases": [
+        "R. (Riccardo) Travaglini",
+        "R. Riccardo Travaglini",
+        "R. Travaglini",
+        "Riccardo Travaglini"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Rock Segnon",
+      "rawNames": [
+        "J.R. (Rock) Segnon"
+      ],
+      "aliases": [
+        "J.R. (Rock) Segnon",
+        "J.R. Rock Segnon",
+        "J.R. Segnon",
+        "Rock Segnon"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.segnon/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/6eb98416-668f-4a95-8146-1617ed4c94eb",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/j.segnon/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Roel Dobbe",
+      "rawNames": [
+        "Dr.ir. R.I.J. (Roel) Dobbe"
+      ],
+      "aliases": [
+        "Dr. R.I.J. (Roel) Dobbe",
+        "Dr. R.I.J. Dobbe",
+        "Dr. R.I.J. Roel Dobbe",
+        "Dr.ir. R.I.J. (Roel) Dobbe",
+        "Roel Dobbe"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/r.i.j.dobbe/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/c0342a63-c1e3-4dd3-bddc-cfdd9e3e6155",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/r.i.j.dobbe/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Roel Faber",
+      "rawNames": [
+        "R.M. (Roel) Faber"
+      ],
+      "aliases": [
+        "R.M. (Roel) Faber",
+        "R.M. Faber",
+        "R.M. Roel Faber",
+        "Roel Faber"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/r.m.faber/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/4c38b3c4-7dc3-4e10-aab8-862f3021a038",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/r.m.faber/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Roelof Stam",
+      "rawNames": [
+        "Roelof Stam"
+      ],
+      "aliases": [
+        "Roelof Stam"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ron van Duin",
+      "rawNames": [
+        "Dr. J.H.R. (Ron) van Duin"
+      ],
+      "aliases": [
+        "Dr. J.H.R. (Ron) van Duin",
+        "J.H.R. (Ron) van Duin",
+        "J.H.R. Ron van Duin",
+        "J.H.R. van Duin",
+        "Ron van Duin"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/j.h.r.vanduin/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/bd41aa37-afbf-4105-8e0e-6f3c4cefb281",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/j.h.r.vanduin/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Ruixuan Zhang",
+      "rawNames": [
+        "R. (Ruixuan) Zhang"
+      ],
+      "aliases": [
+        "R. (Ruixuan) Zhang",
+        "R. Ruixuan Zhang",
+        "R. Zhang",
+        "Ruixuan Zhang"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/r.zhang.2/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/9b581eaf-c078-4465-9f11-7c80509bf547",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/r.zhang.2/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Sabrina Bisschop",
+      "rawNames": [
+        "Sabrina Bisschop"
+      ],
+      "aliases": [
+        "Sabrina Bisschop"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Sander van Barneveld",
+      "rawNames": [
+        "Sander van Barneveld"
+      ],
+      "aliases": [
+        "Sander van Barneveld"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Sander van Cranenburgh",
+      "rawNames": [
+        "Dr.ir. S. (Sander) van Cranenburgh"
+      ],
+      "aliases": [
+        "Dr. S. (Sander) van Cranenburgh",
+        "Dr. S. Sander van Cranenburgh",
+        "Dr. S. van Cranenburgh",
+        "Dr.ir. S. (Sander) van Cranenburgh",
+        "S. van Cranenburgh",
+        "Sander van Cranenburgh"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.vancranenburgh/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/442cfe91-d505-4073-b6b8-a2918ff06feb",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.vancranenburgh/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Sem Nouws",
+      "rawNames": [
+        "Ir. S.J.J. (Sem) Nouws"
+      ],
+      "aliases": [
+        "Ir. S.J.J. (Sem) Nouws",
+        "S.J.J. (Sem) Nouws",
+        "S.J.J. Nouws",
+        "S.J.J. Sem Nouws",
+        "Sem Nouws"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.j.j.nouws/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/413abba4-1c78-4421-b5f1-2c866e4a33a8",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/s.j.j.nouws/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Sepinoud Azimi Rashti",
+      "rawNames": [
+        "S. (Sepinoud) Azimi Rashti PhD"
+      ],
+      "aliases": [
+        "S. (Sepinoud) Azimi Rashti",
+        "S. (Sepinoud) Azimi Rashti PhD",
+        "S. Azimi Rashti",
+        "S. Sepinoud Azimi Rashti",
+        "Sepinoud Azimi Rashti"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.azimirashti/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/3469253e-2dd5-4d0e-a935-ad78f11e04a7",
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sectionSource": "https://www.tudelft.nl/staff/s.azimirashti/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Somayeh Torkaman",
+      "rawNames": [
+        "S. (Somayeh) Torkaman PhD"
+      ],
+      "aliases": [
+        "S. (Somayeh) Torkaman",
+        "S. (Somayeh) Torkaman PhD",
+        "S. Somayeh Torkaman",
+        "S. Torkaman",
+        "Somayeh Torkaman"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.torkaman/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/65560880-10cd-48f0-8129-cddb43be2221",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.torkaman/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Srijith Balakrishnan",
+      "rawNames": [
+        "S. (Srijith) Balakrishnan"
+      ],
+      "aliases": [
+        "S. (Srijith) Balakrishnan",
+        "S. Balakrishnan",
+        "S. Srijith Balakrishnan",
+        "Srijith Balakrishnan"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.balakrishnan/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/d9c6174c-4a2b-4652-8ae0-e437b47908a1",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.balakrishnan/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Stefan Pfenninger",
+      "rawNames": [
+        "Dr. S. (Stefan) Pfenninger"
+      ],
+      "aliases": [
+        "Dr. S. (Stefan) Pfenninger",
+        "S. (Stefan) Pfenninger",
+        "S. Pfenninger",
+        "S. Stefan Pfenninger",
+        "Stefan Pfenninger"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.pfenninger/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/84899edf-e555-4064-b3d6-8e47b7c94703",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/s.pfenninger/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Stefan Strömer",
+      "rawNames": [
+        "S.S. (Stefan) Strömer"
+      ],
+      "aliases": [
+        "S.S. (Stefan) Strömer",
+        "S.S. Stefan Strömer",
+        "S.S. Strömer",
+        "Stefan Strömer"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.s.stromer/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/c1415fea-3eed-4291-81c2-df77b4203eb3",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/s.s.stromer/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Stefano Fazi",
+      "rawNames": [
+        "Dr. S. (Stefano) Fazi"
+      ],
+      "aliases": [
+        "Dr. S. (Stefano) Fazi",
+        "S. (Stefano) Fazi",
+        "S. Fazi",
+        "S. Stefano Fazi",
+        "Stefano Fazi"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.fazi/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/063373e1-6fc1-446f-bb0c-e41fd0fde503",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.fazi/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Stéphane Hess",
+      "rawNames": [
+        "Prof.dr. S. (Stéphane) Hess"
+      ],
+      "aliases": [
+        "Prof. S. (Stéphane) Hess",
+        "Prof. S. Hess",
+        "Prof. S. Stéphane Hess",
+        "Prof.dr. S. (Stéphane) Hess",
+        "Stéphane Hess"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.hess/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/977ab971-0a3c-4a80-b807-077b7cf29bc2",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.hess/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Steven Sihyun Yoo",
+      "rawNames": [
+        "S. (Steven Sihyun) Yoo"
+      ],
+      "aliases": [
+        "S. (Steven Sihyun) Yoo",
+        "S. Steven Sihyun Yoo",
+        "S. Yoo",
+        "Steven Sihyun Yoo"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.yoo.1/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/927e9a5b-27f7-47b2-b7c3-f26a61f85670",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.yoo.1/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Su Li Heng",
+      "rawNames": [
+        "S.L. (Su Li) Heng"
+      ],
+      "aliases": [
+        "S.L. (Su Li) Heng",
+        "S.L. Heng",
+        "S.L. Su Li Heng",
+        "Su Li Heng"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.l.heng/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/e2ebdcb0-b895-4763-bc00-8bfd881af338",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/s.l.heng/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Sugandha Chauhan",
+      "rawNames": [
+        "S. (Sugandha) Chauhan"
+      ],
+      "aliases": [
+        "S. (Sugandha) Chauhan",
+        "S. Chauhan",
+        "S. Sugandha Chauhan",
+        "Sugandha Chauhan"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/s.chauhan.1/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/9b7b772b-a647-4374-b825-a8a52237e7e9",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/s.chauhan.1/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Svenja Bielefeld",
+      "rawNames": [
+        "S. E. (Svenja) Bielefeld, MSc"
+      ],
+      "aliases": [
+        "S. E. (Svenja) Bielefeld",
+        "S. E. (Svenja) Bielefeld, MSc",
+        "S. E. Bielefeld",
+        "S. E. Svenja Bielefeld",
+        "Svenja Bielefeld"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Thaddaeus Weisshaar",
+      "rawNames": [
+        "T.C. (Thaddaeus) Weisshaar MSc"
+      ],
+      "aliases": [
+        "T.C. (Thaddaeus) Weisshaar",
+        "T.C. (Thaddaeus) Weisshaar MSc",
+        "T.C. Thaddaeus Weisshaar",
+        "T.C. Weisshaar",
+        "Thaddaeus Weisshaar"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/t.c.weisshaar/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/4fbbfe61-2ad8-4a7c-8523-602fc154866d",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/t.c.weisshaar/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Thijmen Wiltink",
+      "rawNames": [
+        "T.J. (Thijmen) Wiltink MSc"
+      ],
+      "aliases": [
+        "T.J. (Thijmen) Wiltink",
+        "T.J. (Thijmen) Wiltink MSc",
+        "T.J. Thijmen Wiltink",
+        "T.J. Wiltink",
+        "Thijmen Wiltink"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/t.j.wiltink/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/9a1a787d-0e80-4b95-ba4e-8bde8c84930f",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/t.j.wiltink/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Tina Comes",
+      "rawNames": [
+        "Prof.Dr. T.C. (Tina) Comes"
+      ],
+      "aliases": [
+        "Prof. T.C. (Tina) Comes",
+        "Prof. T.C. Comes",
+        "Prof. T.C. Tina Comes",
+        "Prof.Dr. T.C. (Tina) Comes",
+        "Tina Comes"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/t.comes/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/b5aed752-2082-4419-a889-c95472860437",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/t.comes/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Viktor Zobernig",
+      "rawNames": [
+        "Ing. V.Z. (Viktor) Zobernig"
+      ],
+      "aliases": [
+        "Ing. V.Z. (Viktor) Zobernig",
+        "Ing. V.Z. Viktor Zobernig",
+        "Ing. V.Z. Zobernig",
+        "Viktor Zobernig"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/v.z.zobernig/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/17e2b350-7af2-40ad-8455-b422037ee7d9",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/v.z.zobernig/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Vincent Marchau",
+      "rawNames": [
+        "Prof.dr.ir. V.A.W.J. (Vincent) Marchau"
+      ],
+      "aliases": [
+        "Prof.dr. V.A.W.J. (Vincent) Marchau",
+        "Prof.dr. V.A.W.J. Marchau",
+        "Prof.dr. V.A.W.J. Vincent Marchau",
+        "Prof.dr.ir. V.A.W.J. (Vincent) Marchau",
+        "Vincent Marchau"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/v.a.w.j.marchau/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/e3416a52-eab9-4f37-8b07-2a9549781873",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/v.a.w.j.marchau/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Yannick Egberink",
+      "rawNames": [
+        "Yannick Egberink"
+      ],
+      "aliases": [
+        "Yannick Egberink"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/y.f.egberink/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/bf9cadca-0d80-4578-a660-936da5ffb162",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/y.f.egberink/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Yao-Hua Tan",
+      "rawNames": [
+        "Prof.dr. Y. (Yao-Hua) Tan"
+      ],
+      "aliases": [
+        "Prof. Y. (Yao-Hua) Tan",
+        "Prof. Y. Tan",
+        "Prof. Y. Yao-Hua Tan",
+        "Prof.dr. Y. (Yao-Hua) Tan",
+        "Yao-Hua Tan"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/y.tan/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/3475b081-5471-4a33-935d-6d826071bb94",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Yousef Maknoon",
+      "rawNames": [
+        "Dr. M.Y. (Yousef) Maknoon"
+      ],
+      "aliases": [
+        "Dr. M.Y. (Yousef) Maknoon",
+        "M.Y. (Yousef) Maknoon",
+        "M.Y. Maknoon",
+        "M.Y. Yousef Maknoon",
+        "Yousef Maknoon"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/m.y.maknoon/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/13b21692-7da3-4061-8778-cc439faf0e9d",
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sectionSource": "https://www.tudelft.nl/staff/m.y.maknoon/",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Yvonne Lont",
+      "rawNames": [
+        "Yvonne Lont"
+      ],
+      "aliases": [
+        "Yvonne Lont"
+      ],
+      "profileUrl": "",
+      "pureProfileUrl": "",
+      "section": "",
+      "domain": "",
+      "sectionSource": "",
+      "profileFetchError": ""
+    },
+    {
+      "displayName": "Zofia Lukszo",
+      "rawNames": [
+        "Prof.dr.ir. Z. (Zofia) Lukszo"
+      ],
+      "aliases": [
+        "Prof.dr. Z. (Zofia) Lukszo",
+        "Prof.dr. Z. Lukszo",
+        "Prof.dr. Z. Zofia Lukszo",
+        "Prof.dr.ir. Z. (Zofia) Lukszo",
+        "Zofia Lukszo"
+      ],
+      "profileUrl": "https://www.tudelft.nl/staff/z.lukszo/",
+      "pureProfileUrl": "https://research.tudelft.nl/en/persons/a4905149-43a0-483f-b960-5db76da3f52f",
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sectionSource": "https://www.tudelft.nl/staff/z.lukszo/",
+      "profileFetchError": ""
+    }
+  ]
+}

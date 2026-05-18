@@ -1,0 +1,270 @@
+{
+  "methodNodes": [
+    {
+      "id": "Machine Learning",
+      "label": "Machine Learning (ML)",
+      "shortLabel": "Machine Learning",
+      "examples": ["Logistic Regression", "Linear Regression", "Decision Trees", "Ensemble Methods", "Support Vector Machines"]
+    },
+    {
+      "id": "Supervised learning",
+      "label": "Supervised learning",
+      "shortLabel": "Supervised",
+      "examples": ["classification", "regression", "prediction"]
+    },
+    {
+      "id": "Unsupervised learning",
+      "label": "Unsupervised learning",
+      "shortLabel": "Unsupervised",
+      "examples": ["clustering", "topic models", "dimensionality reduction"]
+    },
+    {
+      "id": "Reinforcement learning",
+      "label": "Reinforcement learning",
+      "shortLabel": "Reinforcement",
+      "examples": ["control", "agents", "policy learning"]
+    },
+    {
+      "id": "Deep Learning",
+      "label": "Deep learning (DL)",
+      "shortLabel": "Deep learning",
+      "examples": ["CNNs", "RNNs", "Transformers"]
+    },
+    {
+      "id": "Foundation Models",
+      "label": "Foundation models",
+      "shortLabel": "Foundation models",
+      "examples": ["pretraining", "transfer"]
+    },
+    {
+      "id": "Generative AI",
+      "label": "Generative AI",
+      "shortLabel": "Generative AI",
+      "examples": ["GANs", "Diffusion", "VAEs"]
+    }
+  ],
+  "methodRules": [
+    {
+      "tag": "Logistic regression",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\blogistic regression\\b"]
+    },
+    {
+      "tag": "Linear regression",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\blinear regression\\b"]
+    },
+    {
+      "tag": "Decision trees",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\bdecision trees?\\b", "\\bclassification trees?\\b", "\\bregression trees?\\b"]
+    },
+    {
+      "tag": "Ensemble methods",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\bensemble methods?\\b", "\\brandom forests?\\b", "\\bgradient boosting\\b", "\\bXGBoost\\b", "\\bLightGBM\\b"]
+    },
+    {
+      "tag": "Support vector machines",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\bsupport vector machines?\\b", "\\bSVMs?\\b"]
+    },
+    {
+      "tag": "Classification",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\bclassification\\b", "\\bclassifier\\b", "\\bsupervised learning\\b"]
+    },
+    {
+      "tag": "Regression and forecasting",
+      "families": ["Machine Learning", "Supervised learning"],
+      "patterns": ["\\bregression\\b", "\\bforecasting\\b", "\\bpredictive modelling\\b", "\\bpredictive modeling\\b", "\\btime series\\b"]
+    },
+    {
+      "tag": "Clustering",
+      "families": ["Machine Learning", "Unsupervised learning"],
+      "patterns": ["\\bclustering\\b", "\\bcluster analysis\\b", "\\bk-?means\\b", "\\bDBSCAN\\b", "\\bhierarchical cluster"]
+    },
+    {
+      "tag": "Topic modeling",
+      "families": ["Machine Learning", "Unsupervised learning"],
+      "patterns": ["\\btopic models?\\b", "\\btopic modelling\\b", "\\btopic modeling\\b", "\\bLDA\\b"]
+    },
+    {
+      "tag": "Dimensionality reduction",
+      "families": ["Machine Learning", "Unsupervised learning"],
+      "patterns": ["\\bdimensionality reduction\\b", "\\bPCA\\b", "\\bt-SNE\\b", "\\bUMAP\\b"]
+    },
+    {
+      "tag": "Reinforcement learning",
+      "families": ["Machine Learning", "Reinforcement learning"],
+      "patterns": ["\\breinforcement learning\\b", "\\bQ-learning\\b", "\\bpolicy gradient\\b", "\\bMarkov decision process\\b"]
+    },
+    {
+      "tag": "CNNs",
+      "families": ["Machine Learning", "Deep Learning"],
+      "patterns": ["\\bCNNs?\\b", "\\bconvolutional neural", "\\bcomputer vision\\b", "\\bimage recognition\\b", "\\bobject detection\\b"]
+    },
+    {
+      "tag": "RNNs",
+      "families": ["Machine Learning", "Deep Learning"],
+      "patterns": ["\\bRNNs?\\b", "\\bLSTM\\b", "\\bGRU\\b", "\\brecurrent neural"]
+    },
+    {
+      "tag": "Transformers",
+      "families": ["Machine Learning", "Deep Learning", "Foundation Models"],
+      "patterns": ["\\btransformers?\\b", "\\bBERT\\b", "\\battention mechanism\\b", "\\blarge language models?\\b", "\\bLLMs?\\b"]
+    },
+    {
+      "tag": "Foundation models",
+      "families": ["Machine Learning", "Deep Learning", "Foundation Models"],
+      "patterns": ["\\bfoundation models?\\b", "\\bpre-?training\\b", "\\btransfer learning\\b", "\\bfine-?tuning\\b"]
+    },
+    {
+      "tag": "Generative AI",
+      "families": ["Machine Learning", "Deep Learning", "Foundation Models", "Generative AI"],
+      "patterns": ["\\bgenerative AI\\b", "\\bChatGPT\\b", "\\bGPT\\b", "\\bGANs?\\b", "\\bdiffusion models?\\b", "\\bVAEs?\\b", "\\bvariational autoencoders?\\b"]
+    },
+    {
+      "tag": "Natural language processing",
+      "families": ["Machine Learning"],
+      "patterns": ["\\bnatural language processing\\b", "\\bNLP\\b", "\\btext mining\\b", "\\bsentiment analysis\\b"]
+    },
+    {
+      "tag": "Bayesian methods",
+      "families": ["Machine Learning"],
+      "patterns": ["\\bBayesian\\b", "\\bGaussian process", "\\bprobabilistic model"]
+    },
+    {
+      "tag": "Optimization with ML",
+      "families": ["Machine Learning"],
+      "patterns": ["\\bBayesian optimization\\b", "\\bsurrogate model", "\\binverse optimization\\b", "\\bdata-driven optimization\\b"]
+    },
+    {
+      "tag": "Anomaly detection",
+      "families": ["Machine Learning", "Unsupervised learning"],
+      "patterns": ["\\banomaly detection\\b", "\\boutlier detection\\b", "\\bfault detection\\b"]
+    },
+    {
+      "tag": "Recommender systems",
+      "families": ["Machine Learning"],
+      "patterns": ["\\brecommender systems?\\b", "\\brecommendation algorithm"]
+    },
+    {
+      "tag": "Machine learning",
+      "families": ["Machine Learning"],
+      "patterns": ["\\bmachine learning\\b", "\\bartificial intelligence\\b", "\\bAI-powered\\b", "\\bAI based\\b", "\\bdata-driven\\b"]
+    }
+  ],
+  "domainNodes": [
+    {
+      "id": "TLO",
+      "label": "Transport & Logistics (TLO)",
+      "shortLabel": "TLO",
+      "subtitle": "routing · forecasting · autonomy",
+      "priority": 3
+    },
+    {
+      "id": "E&I",
+      "label": "Energy & Industry (E&I)",
+      "shortLabel": "E&I",
+      "subtitle": "maintenance · optimisation · control",
+      "priority": 4
+    },
+    {
+      "id": "ICT",
+      "label": "ICT",
+      "shortLabel": "ICT",
+      "subtitle": "cybersecurity · NLP · agents",
+      "priority": 1
+    },
+    {
+      "id": "SDM",
+      "label": "System Decision Methods (SDM)",
+      "shortLabel": "SDM",
+      "subtitle": "control · monitoring · decision support",
+      "priority": 2
+    }
+  ],
+  "domainRules": [
+    {
+      "tag": "Transport and logistics",
+      "domain": "TLO",
+      "patterns": ["\\btransport\\b", "\\blogistics\\b", "\\bfreight\\b", "\\btrucking\\b", "\\bheavy duty trucks?\\b", "\\bvehicle\\b", "\\btraffic\\b", "\\bmobility\\b", "\\brouting\\b", "\\btravel\\b", "\\bautonom(?:ous|y)\\b"]
+    },
+    {
+      "tag": "Aviation",
+      "domain": "TLO",
+      "patterns": ["\\baviation\\b", "\\baircraft\\b", "\\bairline\\b", "\\bairport\\b"]
+    },
+    {
+      "tag": "Maritime and ports",
+      "domain": "TLO",
+      "patterns": ["\\bmaritime\\b", "\\bport\\b", "\\bshipping\\b", "\\bvessel\\b"]
+    },
+    {
+      "tag": "Energy",
+      "domain": "E&I",
+      "patterns": ["\\benergy\\b", "\\belectricity\\b", "\\bhydrogen\\b", "\\bpower grid\\b", "\\bdemand response\\b", "\\bheating\\b", "\\belectrolysers?\\b"]
+    },
+    {
+      "tag": "Industry and manufacturing",
+      "domain": "E&I",
+      "patterns": ["\\bindustry\\b", "\\bindustrial\\b", "\\bmanufacturing\\b", "\\bproduction\\b", "\\bmaintenance\\b", "\\bfactory\\b", "\\bcontrol\\b"]
+    },
+    {
+      "tag": "Climate and environment",
+      "domain": "E&I",
+      "patterns": ["\\bclimate\\b", "\\benvironment\\b", "\\bemissions?\\b", "\\bcarbon\\b", "\\bsustainability\\b", "\\bcircular economy\\b"]
+    },
+    {
+      "tag": "Built environment",
+      "domain": "E&I",
+      "patterns": ["\\bbuildings?\\b", "\\binfrastructure\\b", "\\bconstruction\\b", "\\bbuilt environment\\b"]
+    },
+    {
+      "tag": "Agriculture and food",
+      "domain": "E&I",
+      "patterns": ["\\bagriculture\\b", "\\bfood\\b", "\\bfarming\\b", "\\bhorticulture\\b", "\\bgrowing media\\b"]
+    },
+    {
+      "tag": "Cybersecurity and privacy",
+      "domain": "ICT",
+      "patterns": ["\\bprivacy\\b", "\\bsecurity\\b", "\\bcyber", "\\bidentity\\b", "\\bencryption\\b"]
+    },
+    {
+      "tag": "Natural language systems",
+      "domain": "ICT",
+      "patterns": ["\\bnatural language processing\\b", "\\bNLP\\b", "\\blanguage models?\\b", "\\bagents?\\b", "\\bchatbots?\\b"]
+    },
+    {
+      "tag": "Cloud and software platforms",
+      "domain": "ICT",
+      "patterns": ["\\bcloud\\b", "\\bsoftware\\b", "\\bdigital platforms?\\b", "\\binformation systems?\\b", "\\bInternet of Things\\b", "\\bIoT\\b"]
+    },
+    {
+      "tag": "Digital government",
+      "domain": "ICT",
+      "patterns": ["\\bdigital government\\b", "\\bopen data\\b", "\\bportal\\b", "\\bdigital public\\b"]
+    },
+    {
+      "tag": "Healthcare",
+      "domain": "SDM",
+      "patterns": ["\\bhealthcare\\b", "\\bhealth care\\b", "\\bclinical\\b", "\\bpatients?\\b", "\\bmedical\\b", "\\bhospital\\b", "\\bdisease\\b", "\\bdiagnos"]
+    },
+    {
+      "tag": "Decision support",
+      "domain": "SDM",
+      "patterns": ["\\bdecision support\\b", "\\bdecision-making\\b", "\\bdecision making\\b", "\\bmonitoring\\b", "\\bcontrol\\b", "\\bpolicy\\b", "\\bgovernance\\b", "\\bpublic sector\\b", "\\bregulation\\b"]
+    },
+    {
+      "tag": "Finance",
+      "domain": "SDM",
+      "patterns": ["\\bfinance\\b", "\\bbanking\\b", "\\bfinancial\\b", "\\bcost management\\b", "\\binvoice\\b"]
+    },
+    {
+      "tag": "Education",
+      "domain": "SDM",
+      "patterns": ["\\beducation\\b", "\\bstudents?\\b", "\\bcourses?\\b", "\\blearning environment\\b"]
+    }
+  ]
+}

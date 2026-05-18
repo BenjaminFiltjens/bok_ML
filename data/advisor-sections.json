@@ -1,0 +1,67 @@
+{
+  "sourceNote": "Manual correction layer for ESS staff section/domain assignment. The generated data/ess-staff.json file is the main public ESS staff list; entries here can fill or override section/domain mappings for matched ESS staff.",
+  "sectionDomains": {
+    "Transport and Logistics": "TLO",
+    "Transport, Mobility and Logistics": "TLO",
+    "Energy and Industry": "E&I",
+    "Information and Communication Technology": "ICT",
+    "System Engineering": "SDM",
+    "Policy Analysis": "SDM",
+    "Organisation & Governance": "SDM",
+    "Multi Actor Systems": "SDM"
+  },
+  "aliases": {
+    "Sander van Cranenburgh": "S. van Cranenburgh",
+    "Marijn Janssen": "M.F.W.H.A. Janssen",
+    "Prof.dr.ir. M.F.W.H.A. (Marijn) Janssen": "M.F.W.H.A. Janssen",
+    "Stefan Pfenninger": "Stefan Pfenninger",
+    "Tina Comes": "T. Comes"
+  },
+  "staff": {
+    "M.F.W.H.A. Janssen": {
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sourceUrl": "https://www.tudelft.nl/staff/m.f.w.h.a.janssen/"
+    },
+    "S. van Cranenburgh": {
+      "section": "Transport and Logistics",
+      "domain": "TLO",
+      "sourceUrl": "https://research.tudelft.nl/en/persons/s-van-cranenburgh/"
+    },
+    "Z. Lukszo": {
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sourceUrl": "https://research.tudelft.nl/en/persons/z-lukszo/"
+    },
+    "Stefan Pfenninger": {
+      "section": "Energy and Industry",
+      "domain": "E&I",
+      "sourceUrl": "https://research.tudelft.nl/en/organisations/energy-and-industry/"
+    },
+    "Y. Zhauniarovich": {
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sourceUrl": "https://research.tudelft.nl/en/organisations/information-and-communication-technology-5"
+    },
+    "Sepinoud Azimi": {
+      "section": "Information and Communication Technology",
+      "domain": "ICT",
+      "sourceUrl": "https://research.tudelft.nl/en/organisations/information-and-communication-technology-5/persons/"
+    },
+    "W.L. Auping": {
+      "section": "Policy Analysis",
+      "domain": "SDM",
+      "sourceUrl": "https://research.tudelft.nl/en/organisations/policy-analysis/persons/"
+    },
+    "T. Filatova": {
+      "section": "Policy Analysis",
+      "domain": "SDM",
+      "sourceUrl": "https://research.tudelft.nl/en/organisations/policy-analysis/persons/"
+    },
+    "N.Y. Aydin": {
+      "section": "System Engineering",
+      "domain": "SDM",
+      "sourceUrl": "https://research.tudelft.nl/en/organisations/system-engineering/persons/"
+    }
+  }
+}
