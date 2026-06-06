@@ -1,8 +1,10 @@
 import { ArrowUpDown, BookOpen, BrainCircuit, CalendarDays, Database, ExternalLink, FileText, Filter, RefreshCw, Search, Tag, X } from "lucide-react";
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import taxonomy from "../data/taxonomy.json";
 import { TaxonomyVenn } from "./components/TaxonomyVenn";
+import { TrainingDemoPage } from "./components/TrainingDemoPage";
 import { BOK_BY_ID, BOK_BY_SLUG, BOK_ELEMENTS, getBokElementBySlug } from "./data/bok-content";
+import { isTrainingDemoSlug } from "./data/training-demos";
 import { applyFilters, uniqueValues } from "./lib/search";
 import { parseRouteHash, routeToHash, type AppRoute } from "./lib/routes";
 import type { BokElementContent, ExplorerFilters, ThesisDataset, ThesisRecord } from "./types";
@@ -18,6 +20,16 @@ const EMPTY_FILTERS: ExplorerFilters = {
   availability: "all",
   includeArticles: false,
   sort: "relevance"
+};
+
+type ZoomTarget = {
+  slug: string;
+  title: string;
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+  scale: number;
 };
 
 function formatDate(value: string): string {
@@ -75,7 +87,13 @@ function App() {
   return (
     <main className="app-shell">
       <SiteHeader activePage={route.page} dataset={dataset} loadError={loadError} />
-      {route.page === "overview" ? <OverviewPage slug={route.slug} /> : <ThesisExplorerPage dataset={dataset} loadError={loadError} />}
+      {route.page === "overview" ? (
+        <OverviewPage slug={route.slug} />
+      ) : route.page === "demo" ? (
+        <TrainingDemoPage slug={route.slug} />
+      ) : (
+        <ThesisExplorerPage dataset={dataset} loadError={loadError} />
+      )}
       <SiteFooter activePage={route.page} />
     </main>
   );
@@ -91,11 +109,15 @@ function SiteHeader({ activePage, dataset, loadError }: { activePage: AppRoute["
           </span>
           <div>
             <p className="eyebrow">TU Delft TBM</p>
-            <h1>{activePage === "overview" ? "Machine Learning BoK Overview" : "Machine Learning Thesis Explorer"}</h1>
+            <h1>{activePage === "overview" ? "Machine Learning BoK Overview" : activePage === "demo" ? "Interactive Training Demo" : "Machine Learning Thesis Explorer"}</h1>
           </div>
         </div>
         <nav className="top-nav" aria-label="Site sections">
-          <a className={activePage === "overview" ? "top-nav-link active" : "top-nav-link"} href="#overview" aria-current={activePage === "overview" ? "page" : undefined}>
+          <a
+            className={activePage === "overview" || activePage === "demo" ? "top-nav-link active" : "top-nav-link"}
+            href="#overview"
+            aria-current={activePage === "overview" || activePage === "demo" ? "page" : undefined}
+          >
             <BrainCircuit aria-hidden="true" />
             <span>Overview</span>
           </a>
@@ -111,6 +133,15 @@ function SiteHeader({ activePage, dataset, loadError }: { activePage: AppRoute["
 }
 
 function HeaderStatus({ activePage, dataset, loadError }: { activePage: AppRoute["page"]; dataset: ThesisDataset | null; loadError: string }) {
+  if (activePage === "demo") {
+    return (
+      <div className="source-pill">
+        <BrainCircuit aria-hidden="true" />
+        <span>Interactive demo</span>
+      </div>
+    );
+  }
+
   if (activePage === "overview") {
     return (
       <div className="source-pill">
@@ -296,12 +327,38 @@ function OverviewPage({ slug }: { slug: string }) {
   const relatedElements = selected.relatedIds.map((id) => BOK_BY_ID.get(id)).filter((element): element is BokElementContent => Boolean(element));
   const methodCount = BOK_ELEMENTS.filter((element) => element.kind === "method").length;
   const domainCount = BOK_ELEMENTS.filter((element) => element.kind === "domain").length;
+  const [zoomTarget, setZoomTarget] = useState<ZoomTarget | null>(null);
 
   useEffect(() => {
     if (!BOK_BY_SLUG.has(slug)) {
       window.location.hash = routeToHash({ page: "overview", slug: selected.slug });
     }
   }, [selected.slug, slug]);
+
+  function shouldReduceMotion() {
+    return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function openDemoWithZoom(content: BokElementContent, rect?: DOMRect) {
+    const demoHash = routeToHash({ page: "demo", slug: content.slug });
+    if (!rect || shouldReduceMotion()) {
+      window.location.hash = demoHash;
+      return;
+    }
+
+    const width = Math.max(rect.width, 80);
+    const height = Math.max(rect.height, 80);
+    const scale = Math.max(window.innerWidth / width, window.innerHeight / height) * 2.4;
+    setZoomTarget({
+      slug: content.slug,
+      title: content.title,
+      left: rect.left,
+      top: rect.top,
+      width,
+      height,
+      scale
+    });
+  }
 
   return (
     <>
@@ -330,9 +387,14 @@ function OverviewPage({ slug }: { slug: string }) {
             <TaxonomyVenn
               activeIds={[selected.id]}
               ariaLabel="Interactive BoK map for machine-learning methods and TBM application areas"
-              onSelect={(hotspot) => {
+              onSelect={(hotspot, rect) => {
                 const content = BOK_BY_ID.get(hotspot.id);
-                if (content) window.location.hash = routeToHash({ page: "overview", slug: content.slug });
+                if (!content) return;
+                if (isTrainingDemoSlug(content.slug)) {
+                  openDemoWithZoom(content, rect);
+                } else {
+                  window.location.hash = routeToHash({ page: "overview", slug: content.slug });
+                }
               }}
             />
           </div>
@@ -342,7 +404,27 @@ function OverviewPage({ slug }: { slug: string }) {
           <BokExplanation element={selected} relatedElements={relatedElements} />
         </aside>
       </section>
+      <VennZoomOverlay target={zoomTarget} onComplete={() => zoomTarget && (window.location.hash = routeToHash({ page: "demo", slug: zoomTarget.slug }))} />
     </>
+  );
+}
+
+function VennZoomOverlay({ target, onComplete }: { target: ZoomTarget | null; onComplete: () => void }) {
+  if (!target) return null;
+  const style = {
+    "--zoom-left": `${target.left}px`,
+    "--zoom-top": `${target.top}px`,
+    "--zoom-width": `${target.width}px`,
+    "--zoom-height": `${target.height}px`,
+    "--zoom-scale": target.scale.toString()
+  } as CSSProperties;
+
+  return (
+    <div className="venn-zoom-overlay" aria-hidden="true">
+      <div className="venn-zoom-bubble" style={style} onAnimationEnd={onComplete}>
+        <span>{target.title}</span>
+      </div>
+    </div>
   );
 }
 
@@ -587,6 +669,15 @@ function BokExplanation({ element, relatedElements }: { element: BokElementConte
       <BokListSection title="TBM use cases" items={element.useCases} />
       <BokListSection title="Watch for" items={element.cautions} />
 
+      {isTrainingDemoSlug(element.slug) ? (
+        <div className="actions">
+          <a href={routeToHash({ page: "demo", slug: element.slug })}>
+            <BrainCircuit aria-hidden="true" />
+            Open interactive demo
+          </a>
+        </div>
+      ) : null}
+
       {relatedElements.length ? (
         <section className="summary-block">
           <h3>Related elements</h3>
@@ -621,14 +712,14 @@ function SiteFooter({ activePage }: { activePage: AppRoute["page"] }) {
     <footer className="site-footer-lite">
       <div className="footer-inner">
         <div>
-          <h2>{activePage === "overview" ? "TBM Machine Learning BoK Overview" : "TBM Machine Learning Thesis Explorer"}</h2>
+          <h2>{activePage === "overview" || activePage === "demo" ? "TBM Machine Learning BoK Overview" : "TBM Machine Learning Thesis Explorer"}</h2>
           <p>
-            {activePage === "overview"
+            {activePage === "overview" || activePage === "demo"
               ? "A navigable teaching layer for the Machine Learning Body of Knowledge overview."
               : "Generated from public TU Delft Repository metadata. Thesis files are linked, not mirrored."}
           </p>
         </div>
-        {activePage === "overview" ? (
+        {activePage === "overview" || activePage === "demo" ? (
           <a href="#theses">
             <BookOpen aria-hidden="true" />
             Thesis explorer

@@ -1,4 +1,4 @@
-import { type KeyboardEvent } from "react";
+import { type KeyboardEvent, type MouseEvent } from "react";
 import vennScene from "../data/venn-layout.json";
 import { TAXONOMY_HOTSPOTS, type TaxonomyHotspot } from "../data/venn-hotspots";
 
@@ -41,7 +41,7 @@ type TaxonomyVennProps = {
   activeIds?: string[];
   ariaLabel: string;
   counts?: Record<string, number>;
-  onSelect: (hotspot: TaxonomyHotspot) => void;
+  onSelect: (hotspot: TaxonomyHotspot, rect?: DOMRect) => void;
   showCounts?: boolean;
 };
 
@@ -204,7 +204,7 @@ function VennHotspot({
   hotspot: TaxonomyHotspot;
   count: number;
   active: boolean;
-  onSelect: (hotspot: TaxonomyHotspot) => void;
+  onSelect: (hotspot: TaxonomyHotspot, rect?: DOMRect) => void;
   showCount: boolean;
 }) {
   const element = VENN_ELEMENT_BY_ID.get(hotspot.elementId);
@@ -212,10 +212,14 @@ function VennHotspot({
   const countText = formatCount(count);
   const countWidth = Math.max(42, countText.length * 14 + 24);
 
+  function handleSelect(event: MouseEvent<SVGGElement> | KeyboardEvent<SVGGElement>) {
+    onSelect(hotspot, event.currentTarget.getBoundingClientRect());
+  }
+
   function handleKeyDown(event: KeyboardEvent<SVGGElement>) {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      onSelect(hotspot);
+      handleSelect(event);
     }
   }
 
@@ -226,7 +230,7 @@ function VennHotspot({
       tabIndex={0}
       aria-label={showCount ? `${hotspot.label}: ${countText} theses` : `Explain ${hotspot.label}`}
       aria-pressed={active}
-      onClick={() => onSelect(hotspot)}
+      onClick={handleSelect}
       onKeyDown={handleKeyDown}
     >
       <VennTargetShape element={element} target={hotspot.target} />

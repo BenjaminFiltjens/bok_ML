@@ -14,8 +14,14 @@ describe("hash routing", () => {
     expect(parseRouteHash("#overview/deep-learning")).toEqual({ page: "overview", slug: "deep-learning" });
   });
 
+  it("parses demo routes with a default concept", () => {
+    expect(parseRouteHash("#demo")).toEqual({ page: "demo", slug: DEFAULT_BOK_SLUG });
+    expect(parseRouteHash("#demo/supervised-learning")).toEqual({ page: "demo", slug: "supervised-learning" });
+  });
+
   it("serializes routes to shareable hashes", () => {
     expect(routeToHash({ page: "theses" })).toBe("#theses");
     expect(routeToHash({ page: "overview", slug: "generative-ai" })).toBe("#overview/generative-ai");
+    expect(routeToHash({ page: "demo", slug: "reinforcement-learning" })).toBe("#demo/reinforcement-learning");
   });
 });
