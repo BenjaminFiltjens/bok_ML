@@ -40,9 +40,15 @@ type VennScene = {
 type TaxonomyVennProps = {
   activeIds?: string[];
   ariaLabel: string;
+  baseVisible?: boolean;
+  className?: string;
   counts?: Record<string, number>;
+  extraHotspots?: TaxonomyHotspot[];
+  hotspotIds?: string[];
+  interactionLabel?: (hotspot: TaxonomyHotspot) => string;
   onSelect: (hotspot: TaxonomyHotspot, rect?: DOMRect) => void;
   showCounts?: boolean;
+  viewBoxPadding?: number;
 };
 
 const EXCALIDRAW_SCENE = vennScene as VennScene;
@@ -63,30 +69,48 @@ function formatCount(value: number): string {
   return new Intl.NumberFormat("en").format(value);
 }
 
-export function TaxonomyVenn({ activeIds = [], ariaLabel, counts = {}, onSelect, showCounts = false }: TaxonomyVennProps) {
+export function TaxonomyVenn({
+  activeIds = [],
+  ariaLabel,
+  baseVisible = true,
+  className = "",
+  counts = {},
+  extraHotspots = [],
+  hotspotIds,
+  interactionLabel,
+  onSelect,
+  showCounts = false,
+  viewBoxPadding = VENN_PADDING
+}: TaxonomyVennProps) {
   const activeSet = new Set(activeIds);
+  const hotspotIdSet = hotspotIds ? new Set(hotspotIds) : undefined;
+  const visibleHotspots = hotspotIdSet ? TAXONOMY_HOTSPOTS.filter((hotspot) => hotspotIdSet.has(hotspot.id)) : TAXONOMY_HOTSPOTS;
+  const renderedHotspots = [...extraHotspots, ...visibleHotspots];
 
   return (
     <svg
-      className="venn-scene"
-      viewBox={`${VENN_BOUNDS.minX - VENN_PADDING} ${VENN_BOUNDS.minY - VENN_PADDING} ${VENN_BOUNDS.maxX - VENN_BOUNDS.minX + VENN_PADDING * 2} ${
-        VENN_BOUNDS.maxY - VENN_BOUNDS.minY + VENN_PADDING * 2
+      className={className ? `venn-scene ${className}` : "venn-scene"}
+      viewBox={`${VENN_BOUNDS.minX - viewBoxPadding} ${VENN_BOUNDS.minY - viewBoxPadding} ${VENN_BOUNDS.maxX - VENN_BOUNDS.minX + viewBoxPadding * 2} ${
+        VENN_BOUNDS.maxY - VENN_BOUNDS.minY + viewBoxPadding * 2
       }`}
       role="img"
       aria-label={ariaLabel}
     >
       <title>{ariaLabel}</title>
-      <g className="venn-base" aria-hidden="true">
-        {VENN_ELEMENTS.map((element) => (
-          <VennElementShape key={element.id} element={element} />
-        ))}
-      </g>
+      {baseVisible ? (
+        <g className="venn-base" aria-hidden="true">
+          {VENN_ELEMENTS.map((element) => (
+            <VennElementShape key={element.id} element={element} />
+          ))}
+        </g>
+      ) : null}
       <g className="venn-hotspots">
-        {TAXONOMY_HOTSPOTS.map((hotspot) => (
+        {renderedHotspots.map((hotspot) => (
           <VennHotspot
             key={hotspot.id}
             hotspot={hotspot}
             count={counts[hotspot.id] || 0}
+            interactionLabel={interactionLabel?.(hotspot)}
             active={activeSet.has(hotspot.id)}
             onSelect={onSelect}
             showCount={showCounts}
@@ -197,12 +221,14 @@ function VennElementShape({ element }: { element: VennElement }) {
 function VennHotspot({
   hotspot,
   count,
+  interactionLabel,
   active,
   onSelect,
   showCount
 }: {
   hotspot: TaxonomyHotspot;
   count: number;
+  interactionLabel?: string;
   active: boolean;
   onSelect: (hotspot: TaxonomyHotspot, rect?: DOMRect) => void;
   showCount: boolean;
@@ -228,11 +254,12 @@ function VennHotspot({
       className={`venn-click-target ${active ? "active" : ""}`}
       role="button"
       tabIndex={0}
-      aria-label={showCount ? `${hotspot.label}: ${countText} theses` : `Explain ${hotspot.label}`}
+      aria-label={showCount ? `${hotspot.label}: ${countText} theses` : interactionLabel || `Open course explanation for ${hotspot.label}`}
       aria-pressed={active}
       onClick={handleSelect}
       onKeyDown={handleKeyDown}
     >
+      <title>{showCount ? `${hotspot.label}: ${countText} theses` : interactionLabel || `Open course explanation for ${hotspot.label}`}</title>
       <VennTargetShape element={element} target={hotspot.target} />
       {showCount ? (
         <g className="venn-count" transform={`translate(${hotspot.countX} ${hotspot.countY})`} pointerEvents="none">

@@ -1,13 +1,13 @@
 import { ArrowUpDown, BookOpen, BrainCircuit, CalendarDays, Database, ExternalLink, FileText, Filter, RefreshCw, Search, Tag, X } from "lucide-react";
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import taxonomy from "../data/taxonomy.json";
+import { BokPresentationPage } from "./components/BokPresentationPage";
 import { TaxonomyVenn } from "./components/TaxonomyVenn";
-import { TrainingDemoPage } from "./components/TrainingDemoPage";
-import { BOK_BY_ID, BOK_BY_SLUG, BOK_ELEMENTS, getBokElementBySlug } from "./data/bok-content";
-import { isTrainingDemoSlug } from "./data/training-demos";
+import { getSvgSection, hasSvgSection, svgSlideAsset, SVG_SECTIONS, SVG_VENN_SLIDE } from "./data/svg-slides";
+import type { TaxonomyHotspot } from "./data/venn-hotspots";
 import { applyFilters, uniqueValues } from "./lib/search";
 import { parseRouteHash, routeToHash, type AppRoute } from "./lib/routes";
-import type { BokElementContent, ExplorerFilters, ThesisDataset, ThesisRecord } from "./types";
+import type { ExplorerFilters, ThesisDataset, ThesisRecord } from "./types";
 
 const EMPTY_FILTERS: ExplorerFilters = {
   query: "",
@@ -22,14 +22,26 @@ const EMPTY_FILTERS: ExplorerFilters = {
   sort: "relevance"
 };
 
-type ZoomTarget = {
-  slug: string;
-  title: string;
-  left: number;
-  top: number;
-  width: number;
-  height: number;
-  scale: number;
+const SECTION_SLUG_BY_HOTSPOT_ID = new Map([
+  ["General Machine Learning", "machine-learning"],
+  ["Machine Learning", "feature-based-ml"],
+  ["Supervised learning", "supervised-learning"],
+  ["Unsupervised learning", "unsupervised-learning"],
+  ["Reinforcement learning", "reinforcement-learning"],
+  ["Deep Learning", "deep-learning"],
+  ["Foundation Models", "foundation-models"],
+  ["Generative AI", "generative-ai"]
+]);
+
+const HOTSPOT_ID_BY_SECTION_SLUG = new Map(Array.from(SECTION_SLUG_BY_HOTSPOT_ID.entries()).map(([id, sectionSlug]) => [sectionSlug, id]));
+
+const GENERAL_ML_HOTSPOT: TaxonomyHotspot = {
+  id: "General Machine Learning",
+  label: "Machine Learning overview",
+  elementId: "Bps2xFq2",
+  kind: "method",
+  countX: 1248,
+  countY: 262
 };
 
 function formatDate(value: string): string {
@@ -55,6 +67,8 @@ function App() {
   const [route, setRoute] = useState<AppRoute>(() => parseRouteHash(window.location.hash));
   const [dataset, setDataset] = useState<ThesisDataset | null>(null);
   const [loadError, setLoadError] = useState("");
+  const shellClassName =
+    route.page === "overview" ? "app-shell presentation-mode overview-mode" : route.page === "learn" ? "app-shell presentation-mode slide-mode" : "app-shell";
 
   useEffect(() => {
     function syncRoute() {
@@ -85,12 +99,12 @@ function App() {
   }, []);
 
   return (
-    <main className="app-shell">
+    <main className={shellClassName}>
       <SiteHeader activePage={route.page} dataset={dataset} loadError={loadError} />
       {route.page === "overview" ? (
         <OverviewPage slug={route.slug} />
-      ) : route.page === "demo" ? (
-        <TrainingDemoPage slug={route.slug} />
+      ) : route.page === "learn" ? (
+        <BokPresentationPage slug={route.slug} slide={route.slide} />
       ) : (
         <ThesisExplorerPage dataset={dataset} loadError={loadError} />
       )}
@@ -108,18 +122,18 @@ function SiteHeader({ activePage, dataset, loadError }: { activePage: AppRoute["
             ML
           </span>
           <div>
-            <p className="eyebrow">TU Delft TBM</p>
-            <h1>{activePage === "overview" ? "Machine Learning BoK Overview" : activePage === "demo" ? "Interactive Training Demo" : "Machine Learning Thesis Explorer"}</h1>
+            <p className="eyebrow">TU Delft ESS</p>
+            <h1>{activePage === "theses" ? "Machine Learning Thesis Explorer" : "Machine Learning Starter Guide"}</h1>
           </div>
         </div>
         <nav className="top-nav" aria-label="Site sections">
           <a
-            className={activePage === "overview" || activePage === "demo" ? "top-nav-link active" : "top-nav-link"}
+            className={activePage === "overview" || activePage === "learn" ? "top-nav-link active" : "top-nav-link"}
             href="#overview"
-            aria-current={activePage === "overview" || activePage === "demo" ? "page" : undefined}
+            aria-current={activePage === "overview" || activePage === "learn" ? "page" : undefined}
           >
             <BrainCircuit aria-hidden="true" />
-            <span>Overview</span>
+            <span>Starter Guide</span>
           </a>
           <a className={activePage === "theses" ? "top-nav-link active" : "top-nav-link"} href="#theses" aria-current={activePage === "theses" ? "page" : undefined}>
             <BookOpen aria-hidden="true" />
@@ -133,11 +147,11 @@ function SiteHeader({ activePage, dataset, loadError }: { activePage: AppRoute["
 }
 
 function HeaderStatus({ activePage, dataset, loadError }: { activePage: AppRoute["page"]; dataset: ThesisDataset | null; loadError: string }) {
-  if (activePage === "demo") {
+  if (activePage === "learn") {
     return (
       <div className="source-pill">
         <BrainCircuit aria-hidden="true" />
-        <span>Interactive demo</span>
+        <span>Course guide</span>
       </div>
     );
   }
@@ -146,7 +160,7 @@ function HeaderStatus({ activePage, dataset, loadError }: { activePage: AppRoute
     return (
       <div className="source-pill">
         <BrainCircuit aria-hidden="true" />
-        <span>BoK overview</span>
+        <span>Beginner map</span>
       </div>
     );
   }
@@ -190,7 +204,6 @@ function ThesisExplorerPage({ dataset, loadError }: { dataset: ThesisDataset | n
   const records = dataset?.records || [];
   const recordsInScope = useMemo(() => records.filter((record) => filters.includeArticles || record.recordCategory !== "article"), [records, filters.includeArticles]);
   const filteredRecords = useMemo(() => applyFilters(records, filters), [records, filters]);
-  const recordsForTaxonomyCounts = useMemo(() => applyFilters(records, { ...filters, methodNode: "", domainNode: "" }), [records, filters]);
   const selectedRecord = filteredRecords.find((record) => record.id === selectedId) || filteredRecords[0] || recordsInScope[0] || records[0];
   const objectTypes = useMemo(() => uniqueValues(recordsInScope, (record) => record.objectType), [recordsInScope]);
   const years = useMemo(() => uniqueValues(recordsInScope, (record) => record.year).sort((a, b) => b.localeCompare(a)), [recordsInScope]);
@@ -287,7 +300,7 @@ function ThesisExplorerPage({ dataset, loadError }: { dataset: ThesisDataset | n
       </section>
 
       <TaxonomyMap
-        records={recordsForTaxonomyCounts}
+        records={filteredRecords}
         activeMethod={filters.methodNode}
         activeDomain={filters.domainNode}
         onMethodSelect={(label) => toggleTaxonomyNode("methodNode", label)}
@@ -322,109 +335,55 @@ function ThesisExplorerPage({ dataset, loadError }: { dataset: ThesisDataset | n
   );
 }
 
-function OverviewPage({ slug }: { slug: string }) {
-  const selected = getBokElementBySlug(slug);
-  const relatedElements = selected.relatedIds.map((id) => BOK_BY_ID.get(id)).filter((element): element is BokElementContent => Boolean(element));
-  const methodCount = BOK_ELEMENTS.filter((element) => element.kind === "method").length;
-  const domainCount = BOK_ELEMENTS.filter((element) => element.kind === "domain").length;
-  const [zoomTarget, setZoomTarget] = useState<ZoomTarget | null>(null);
+function OverviewPage({ slug }: { slug?: string }) {
+  const selectedSection = getSvgSection(slug);
+  const activeHotspotId = HOTSPOT_ID_BY_SECTION_SLUG.get(selectedSection.slug);
 
   useEffect(() => {
-    if (!BOK_BY_SLUG.has(slug)) {
-      window.location.hash = routeToHash({ page: "overview", slug: selected.slug });
+    if (slug && !hasSvgSection(slug)) {
+      window.location.hash = routeToHash({ page: "overview", slug: selectedSection.slug });
     }
-  }, [selected.slug, slug]);
+  }, [selectedSection.slug, slug]);
 
-  function shouldReduceMotion() {
-    return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-  }
-
-  function openDemoWithZoom(content: BokElementContent, rect?: DOMRect) {
-    const demoHash = routeToHash({ page: "demo", slug: content.slug });
-    if (!rect || shouldReduceMotion()) {
-      window.location.hash = demoHash;
-      return;
-    }
-
-    const width = Math.max(rect.width, 80);
-    const height = Math.max(rect.height, 80);
-    const scale = Math.max(window.innerWidth / width, window.innerHeight / height) * 2.4;
-    setZoomTarget({
-      slug: content.slug,
-      title: content.title,
-      left: rect.left,
-      top: rect.top,
-      width,
-      height,
-      scale
-    });
+  function openSection(sectionSlug: string) {
+    const section = getSvgSection(sectionSlug);
+    window.location.hash = routeToHash({ page: "learn", slug: section.slug, slide: 1 });
   }
 
   return (
     <>
-      <section className="overview-intro">
-        <div>
-          <p className="eyebrow">Interactive BoK</p>
-          <h2>Machine learning concepts in context</h2>
-          <p>The overview connects core method families with TBM application areas, keeping the original BoK map visible while each element gets teaching-primer notes.</p>
-        </div>
-        <div className="overview-summary" aria-label="Overview summary">
-          <span>{formatCount(methodCount)} method regions</span>
-          <span>{formatCount(domainCount)} application areas</span>
-        </div>
-      </section>
-
-      <section className="overview-shell">
-        <div className="overview-map-column">
-          <div className="taxonomy-header">
-            <BrainCircuit aria-hidden="true" />
-            <div>
-              <h2>Machine Learning BoK Map</h2>
-              <p>Method families sit in the centre; TBM application areas frame the map.</p>
-            </div>
-          </div>
-          <div className="venn-stage overview-venn-stage">
-            <TaxonomyVenn
-              activeIds={[selected.id]}
-              ariaLabel="Interactive BoK map for machine-learning methods and TBM application areas"
-              onSelect={(hotspot, rect) => {
-                const content = BOK_BY_ID.get(hotspot.id);
-                if (!content) return;
-                if (isTrainingDemoSlug(content.slug)) {
-                  openDemoWithZoom(content, rect);
-                } else {
-                  window.location.hash = routeToHash({ page: "overview", slug: content.slug });
-                }
-              }}
-            />
-          </div>
+      <section className="svg-overview-page" aria-label="Machine learning taxonomy slide hub">
+        <div className="svg-hub-frame">
+          <img className="svg-hub-image" src={svgSlideAsset(SVG_VENN_SLIDE.file)} alt={SVG_VENN_SLIDE.alt} />
+          <TaxonomyVenn
+            activeIds={activeHotspotId ? [activeHotspotId] : []}
+            ariaLabel="Interactive hotspot layer for the machine learning taxonomy slide hub"
+            baseVisible={false}
+            className="svg-hub-hotspots"
+            extraHotspots={[GENERAL_ML_HOTSPOT]}
+            hotspotIds={Array.from(SECTION_SLUG_BY_HOTSPOT_ID.keys())}
+            interactionLabel={(hotspot) => {
+              const sectionSlug = SECTION_SLUG_BY_HOTSPOT_ID.get(hotspot.id);
+              const section = sectionSlug ? getSvgSection(sectionSlug) : undefined;
+              return section ? `Open ${section.title} slides` : `${hotspot.label} is not a slide section`;
+            }}
+            onSelect={(hotspot) => {
+              const sectionSlug = SECTION_SLUG_BY_HOTSPOT_ID.get(hotspot.id);
+              if (sectionSlug) openSection(sectionSlug);
+            }}
+            viewBoxPadding={10}
+          />
         </div>
 
-        <aside className="bok-panel" aria-label="Selected BoK element">
-          <BokExplanation element={selected} relatedElements={relatedElements} />
-        </aside>
+        <nav className="svg-section-dock" aria-label="Slide sections">
+          {SVG_SECTIONS.map((section) => (
+            <a key={section.slug} className={selectedSection.slug === section.slug ? "active" : ""} href={routeToHash({ page: "learn", slug: section.slug, slide: 1 })}>
+              {section.shortTitle}
+            </a>
+          ))}
+        </nav>
       </section>
-      <VennZoomOverlay target={zoomTarget} onComplete={() => zoomTarget && (window.location.hash = routeToHash({ page: "demo", slug: zoomTarget.slug }))} />
     </>
-  );
-}
-
-function VennZoomOverlay({ target, onComplete }: { target: ZoomTarget | null; onComplete: () => void }) {
-  if (!target) return null;
-  const style = {
-    "--zoom-left": `${target.left}px`,
-    "--zoom-top": `${target.top}px`,
-    "--zoom-width": `${target.width}px`,
-    "--zoom-height": `${target.height}px`,
-    "--zoom-scale": target.scale.toString()
-  } as CSSProperties;
-
-  return (
-    <div className="venn-zoom-overlay" aria-hidden="true">
-      <div className="venn-zoom-bubble" style={style} onAnimationEnd={onComplete}>
-        <span>{target.title}</span>
-      </div>
-    </div>
   );
 }
 
@@ -650,76 +609,20 @@ function ThesisDetail({ record }: { record: ThesisRecord }) {
   );
 }
 
-function BokExplanation({ element, relatedElements }: { element: BokElementContent; relatedElements: BokElementContent[] }) {
-  return (
-    <article>
-      <div className="detail-kicker">
-        <span>{element.kind === "method" ? "Method region" : "Application area"}</span>
-        <span>{element.id}</span>
-      </div>
-      <h2>{element.title}</h2>
-      <p className="subtitle">{element.definition}</p>
-
-      <section className="summary-block">
-        <h3>Where it sits</h3>
-        <p>{element.relationship}</p>
-      </section>
-
-      <BokListSection title="Common techniques and examples" items={element.examples} />
-      <BokListSection title="TBM use cases" items={element.useCases} />
-      <BokListSection title="Watch for" items={element.cautions} />
-
-      {isTrainingDemoSlug(element.slug) ? (
-        <div className="actions">
-          <a href={routeToHash({ page: "demo", slug: element.slug })}>
-            <BrainCircuit aria-hidden="true" />
-            Open interactive demo
-          </a>
-        </div>
-      ) : null}
-
-      {relatedElements.length ? (
-        <section className="summary-block">
-          <h3>Related elements</h3>
-          <div className="related-links">
-            {relatedElements.map((related) => (
-              <a key={related.id} className="related-link" href={routeToHash({ page: "overview", slug: related.slug })}>
-                {related.title}
-              </a>
-            ))}
-          </div>
-        </section>
-      ) : null}
-    </article>
-  );
-}
-
-function BokListSection({ title, items }: { title: string; items: string[] }) {
-  return (
-    <section className="summary-block">
-      <h3>{title}</h3>
-      <ul className="bok-list">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 function SiteFooter({ activePage }: { activePage: AppRoute["page"] }) {
   return (
     <footer className="site-footer-lite">
       <div className="footer-inner">
         <div>
-          <h2>{activePage === "overview" || activePage === "demo" ? "TBM Machine Learning BoK Overview" : "TBM Machine Learning Thesis Explorer"}</h2>
-          <p>
-            {activePage === "overview" || activePage === "demo"
+          <h2>{activePage === "overview" || activePage === "learn" ? "TU Delft ESS Machine Learning Starter Guide" : "TU Delft ESS Machine Learning Thesis Explorer"}</h2>
+          <p className="footer-description">
+            {activePage === "overview" || activePage === "learn"
               ? "A navigable teaching layer for the Machine Learning Body of Knowledge overview."
               : "Generated from public TU Delft Repository metadata. Thesis files are linked, not mirrored."}
           </p>
+          <p className="copyright-notice">&copy; {new Date().getFullYear()} TU Delft ESS, Engineering Systems and Services. Educational use; all rights reserved.</p>
         </div>
-        {activePage === "overview" || activePage === "demo" ? (
+        {activePage === "overview" || activePage === "learn" ? (
           <a href="#theses">
             <BookOpen aria-hidden="true" />
             Thesis explorer
