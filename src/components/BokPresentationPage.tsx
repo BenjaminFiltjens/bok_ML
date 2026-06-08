@@ -1,6 +1,7 @@
 import { ArrowLeft, ChevronLeft, ChevronRight, Home, Maximize2 } from "lucide-react";
 import { useEffect } from "react";
 import { getSvgSection, svgSlideAsset, SVG_SECTION_ORDER, SVG_SECTIONS } from "../data/svg-slides";
+import { getNextPresentationRoute, getPreviousPresentationRoute } from "../lib/presentation-sequence";
 import { routeToHash, type SlideNumber } from "../lib/routes";
 
 function isFormTarget(target: EventTarget | null): boolean {
@@ -35,29 +36,18 @@ export function BokPresentationPage({ slug, slide }: { slug: string; slide: Slid
   const previousSection = sectionIndex > 0 ? SVG_SECTIONS[sectionIndex - 1] : undefined;
   const nextSection = sectionIndex >= 0 ? SVG_SECTIONS[sectionIndex + 1] : undefined;
   const overviewHash = routeToHash({ page: "overview", slug: section.overviewSlug });
-
-  function goToSlide(nextSlide: number) {
-    window.location.hash = routeToHash({ page: "learn", slug: section.slug, slide: clampSlide(nextSlide, section.slides.length) });
-  }
+  const currentRoute = { page: "learn", slug: section.slug, slide: currentSlideNumber } as const;
 
   function goToOverview() {
     window.location.hash = overviewHash;
   }
 
   function advance() {
-    if (currentSlideNumber < section.slides.length) {
-      goToSlide(currentSlideNumber + 1);
-      return;
-    }
-    goToOverview();
+    window.location.hash = routeToHash(getNextPresentationRoute(currentRoute));
   }
 
   function previous() {
-    if (currentSlideNumber > 1) {
-      goToSlide(currentSlideNumber - 1);
-      return;
-    }
-    goToOverview();
+    window.location.hash = routeToHash(getPreviousPresentationRoute(currentRoute));
   }
 
   useEffect(() => {
@@ -114,7 +104,7 @@ export function BokPresentationPage({ slug, slide }: { slug: string; slide: Slid
       <div className="svg-slide-controls" aria-label="Slide navigation">
         <button type="button" className="demo-button ghost" onClick={previous}>
           <ChevronLeft aria-hidden="true" />
-          {currentSlideNumber > 1 ? "Previous slide" : "Venn diagram"}
+          Previous
         </button>
         <div className="svg-section-jump">
           {previousSection ? <a href={routeToHash({ page: "learn", slug: previousSection.slug, slide: 1 })}>{previousSection.shortTitle}</a> : null}
@@ -124,8 +114,8 @@ export function BokPresentationPage({ slug, slide }: { slug: string; slide: Slid
           {nextSection ? <a href={routeToHash({ page: "learn", slug: nextSection.slug, slide: 1 })}>{nextSection.shortTitle}</a> : null}
         </div>
         <button type="button" className="demo-button primary" onClick={advance}>
-          {currentSlideNumber < section.slides.length ? "Next slide" : "Venn diagram"}
-          {currentSlideNumber < section.slides.length ? <ChevronRight aria-hidden="true" /> : <Home aria-hidden="true" />}
+          Next
+          {section.slug === "generative-ai" && currentSlideNumber === section.slides.length ? <Home aria-hidden="true" /> : <ChevronRight aria-hidden="true" />}
         </button>
       </div>
     </section>

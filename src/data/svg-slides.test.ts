@@ -8,8 +8,8 @@ describe("SVG slide manifest", () => {
     expect(SVG_SECTION_ORDER).toEqual([
       "machine-learning",
       "supervised-learning",
-      "self-supervised-learning",
       "unsupervised-learning",
+      "self-supervised-learning",
       "reinforcement-learning",
       "feature-based-ml",
       "deep-learning",

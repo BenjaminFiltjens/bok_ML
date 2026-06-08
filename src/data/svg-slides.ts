@@ -63,20 +63,6 @@ export const SVG_SECTIONS: SvgSection[] = [
     ]
   },
   {
-    slug: "self-supervised-learning",
-    title: "Self-Supervised Learning",
-    shortTitle: "Self-Supervised",
-    category: "learning-strategy",
-    overviewSlug: "machine-learning",
-    slides: [
-      {
-        title: "Self-Supervised Learning Terms",
-        file: "SSL_pipeline_terms_slide1_outlined.svg",
-        alt: "Self-supervised learning slide explaining how models create training signals from raw data."
-      }
-    ]
-  },
-  {
     slug: "unsupervised-learning",
     title: "Unsupervised Learning",
     shortTitle: "Unsupervised",
@@ -92,6 +78,20 @@ export const SVG_SECTIONS: SvgSection[] = [
         title: "Unsupervised Learning Examples",
         file: "UL_pipeline_examples_slide2_outlined.svg",
         alt: "Unsupervised learning examples slide with clustering, dimensionality reduction, and topic discovery examples."
+      }
+    ]
+  },
+  {
+    slug: "self-supervised-learning",
+    title: "Self-Supervised Learning",
+    shortTitle: "Self-Supervised",
+    category: "learning-strategy",
+    overviewSlug: "machine-learning",
+    slides: [
+      {
+        title: "Self-Supervised Learning Terms",
+        file: "SSL_pipeline_terms_slide1_outlined.svg",
+        alt: "Self-supervised learning slide explaining how models create training signals from raw data."
       }
     ]
   },

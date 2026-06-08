@@ -5,6 +5,7 @@ import { BokPresentationPage } from "./components/BokPresentationPage";
 import { TaxonomyVenn } from "./components/TaxonomyVenn";
 import { getSvgSection, hasSvgSection, svgSlideAsset, SVG_SECTIONS, SVG_VENN_SLIDE } from "./data/svg-slides";
 import type { TaxonomyHotspot } from "./data/venn-hotspots";
+import { getNextPresentationRoute, getPreviousPresentationRoute } from "./lib/presentation-sequence";
 import { applyFilters, uniqueValues } from "./lib/search";
 import { parseRouteHash, routeToHash, type AppRoute } from "./lib/routes";
 import type { ExplorerFilters, ThesisDataset, ThesisRecord } from "./types";
@@ -61,6 +62,11 @@ function formatList(values: string[]): string {
   if (values.length <= 1) return values[0] || "";
   if (values.length === 2) return values.join(" and ");
   return `${values.slice(0, -1).join(", ")}, and ${values.at(-1)}`;
+}
+
+function isFormTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  return ["INPUT", "SELECT", "TEXTAREA", "BUTTON", "A"].includes(target.tagName);
 }
 
 function App() {
@@ -349,6 +355,25 @@ function OverviewPage({ slug }: { slug?: string }) {
     const section = getSvgSection(sectionSlug);
     window.location.hash = routeToHash({ page: "learn", slug: section.slug, slide: 1 });
   }
+
+  useEffect(() => {
+    const overviewRoute = { page: "overview", slug: selectedSection.slug } as const;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (isFormTarget(event.target)) return;
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
+        event.preventDefault();
+        window.location.hash = routeToHash(getNextPresentationRoute(overviewRoute));
+      }
+      if (event.key === "ArrowLeft" || event.key === "PageUp") {
+        event.preventDefault();
+        window.location.hash = routeToHash(getPreviousPresentationRoute(overviewRoute));
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedSection.slug]);
 
   return (
     <>
